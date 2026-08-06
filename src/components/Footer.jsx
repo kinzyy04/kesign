@@ -20,12 +20,12 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#F6F6F6] border-t border-[#E5E5E5] pt-16 pb-12 relative overflow-hidden">
+    <footer className="bg-[#F6F6F6] border-t border-[#E5E5E5] pt-12 pb-8 sm:pt-16 sm:pb-12 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-[#E5E5E5]">
           {/* Brand Col */}
           <div className="md:col-span-5 space-y-4">
-            <a href="#" className="inline-block text-4xl font-extrabold tracking-tighter text-[#111111]">
+            <a href="#" className="inline-block text-3xl sm:text-4xl font-extrabold tracking-tighter text-[#111111]">
               kesign<span className="font-serif-italic text-[#666666]">.</span>
             </a>
             <p className="text-xs text-[#666666] max-w-sm leading-relaxed font-normal">
@@ -40,11 +40,11 @@ export const Footer = () => {
           {/* Quick Nav Col */}
           <div className="md:col-span-3 space-y-3">
             <div className="text-xs font-mono text-[#666666] uppercase tracking-wider mb-4">NAVIGATION</div>
-            <ul className="space-y-2 text-xs font-mono text-[#666666]">
+            <ul className="flex flex-wrap sm:flex-col gap-3 sm:gap-0 sm:space-y-2 text-xs font-mono text-[#666666]">
               <li><a href="#team" className="hover:text-[#111111] transition-colors">Meet the Founders</a></li>
               <li><a href="#services" className="hover:text-[#111111] transition-colors">Services &amp; Capabilities</a></li>
 
-              <li><a href="#portfolio" className="hover:text-[#111111] transition-colors">Concept Portfolio</a></li>
+              <li><a href="#services" className="hover:text-[#111111] transition-colors">Concept Portfolio</a></li>
               <li><a href="#ai-philosophy" className="hover:text-[#111111] transition-colors">Our Philosophy</a></li>
             </ul>
           </div>
@@ -65,7 +65,7 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#666666]">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] sm:text-xs font-mono text-[#666666]">
           <div>
             © {new Date().getFullYear()} kesign studio. All rights reserved. Design with a K.
           </div>

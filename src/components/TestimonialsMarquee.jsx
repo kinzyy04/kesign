@@ -82,7 +82,7 @@ const doubled = [...reviews, ...reviews];
 const StarRating = ({ count }) => (
   <div className="flex gap-0.5 mb-3">
     {Array.from({ length: count }).map((_, i) => (
-      <Star key={i} size={12} className="fill-[#FF5733] text-[#FF5733]" />
+      <Star key={i} className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-[#FF5733] text-[#FF5733]" />
     ))}
   </div>
 );
@@ -113,7 +113,7 @@ export const TestimonialsMarquee = () => {
           {doubled.map((review, idx) => (
             <div
               key={idx}
-              className="flex-shrink-0 w-[300px] bg-[#1a1a1a] border border-white/8 rounded-2xl p-6 flex flex-col gap-3 hover:border-[#FF5733]/40 transition-colors duration-300"
+              className="flex-shrink-0 w-[260px] sm:w-[300px] bg-[#1a1a1a] border border-white/8 rounded-2xl p-4 sm:p-6 flex flex-col gap-3 hover:border-[#FF5733]/40 transition-colors duration-300"
             >
               {/* Quote icon */}
               <Quote size={18} className="text-[#FF5733]/60" />
@@ -122,7 +122,7 @@ export const TestimonialsMarquee = () => {
               <StarRating count={review.stars} />
 
               {/* Review text */}
-              <p className="text-sm text-white/75 leading-relaxed flex-1">
+              <p className="text-xs sm:text-sm text-white/75 leading-relaxed flex-1">
                 "{review.text}"
               </p>
 

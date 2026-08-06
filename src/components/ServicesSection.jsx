@@ -153,7 +153,7 @@ export const ServicesSection = () => {
 
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <h2 className="text-4xl sm:text-6xl md:text-7xl font-extrabold text-[#111111] tracking-tight">
+            <h2 className="text-3xl sm:text-5xl md:text-7xl font-extrabold text-[#111111] tracking-tight">
               What We Build<span className="font-serif-italic text-[#FF5733]">.</span>
             </h2>
             <p className="mt-4 text-base text-[#666666] max-w-xl font-normal">
@@ -168,7 +168,7 @@ export const ServicesSection = () => {
         </div>
 
         {/* 3-Column Card Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-6">
           {capabilities.map((cap, idx) => (
             <motion.div
               key={cap.id}
@@ -180,7 +180,7 @@ export const ServicesSection = () => {
               onClick={() => setActiveModal(cap)}
             >
               {/* Image */}
-              <div className="relative aspect-[16/9] overflow-hidden bg-black flex items-center justify-center">
+              <div className="relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden bg-black flex items-center justify-center">
                 <img
                   src={cap.bannerImage}
                   alt={cap.title}
@@ -195,7 +195,7 @@ export const ServicesSection = () => {
                 </div>
 
                 {/* Stats badge top-right */}
-                <div className="absolute top-4 right-4 z-10">
+                <div className="absolute top-4 right-4 z-10 hidden sm:flex">
                   <span className="px-3 py-1 rounded-full text-[10px] font-mono uppercase backdrop-blur-md text-white border border-white/20 bg-black/60">
                     {cap.stats}
                   </span>
@@ -211,19 +211,19 @@ export const ServicesSection = () => {
               </div>
 
               {/* Card Body */}
-              <div className="flex flex-col flex-1 p-3 sm:p-6">
+              <div className="flex flex-col flex-1 p-2 sm:p-6">
                 {/* Tag */}
                 <span className="text-[8px] sm:text-[10px] font-mono uppercase tracking-widest mb-1.5 sm:mb-3 text-[#999999] line-clamp-1">
                   {cap.tag}
                 </span>
 
                 {/* Title */}
-                <h3 className="text-sm sm:text-xl font-extrabold text-[#111111] tracking-tight leading-tight mb-1.5 sm:mb-3 group-hover:text-[#FF5733] transition-colors duration-300">
+                <h3 className="text-xs sm:text-xl font-extrabold text-[#111111] tracking-tight leading-tight mb-1.5 sm:mb-3 group-hover:text-[#FF5733] transition-colors duration-300 line-clamp-2">
                   {cap.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-[10px] sm:text-xs text-[#666666] leading-relaxed flex-1 mb-3 sm:mb-5 line-clamp-3 sm:line-clamp-none">
+                <p className="hidden sm:block text-[10px] sm:text-xs text-[#666666] leading-relaxed flex-1 mb-3 sm:mb-5 line-clamp-3 sm:line-clamp-none">
                   {cap.description}
                 </p>
 
@@ -231,7 +231,7 @@ export const ServicesSection = () => {
                 <div>
                   <button
                     onClick={(e) => { e.stopPropagation(); setActiveModal(cap); }}
-                    className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full bg-[#111111] text-white font-bold text-[10px] sm:text-xs font-mono uppercase tracking-wider hover:bg-[#FF5733] transition-all duration-300"
+                    className="inline-flex items-center gap-1.5 sm:gap-2 px-2 sm:px-5 py-1 sm:py-2.5 rounded-full bg-[#111111] text-white font-bold text-[9px] sm:text-xs font-mono uppercase tracking-wider hover:bg-[#FF5733] transition-all duration-300"
                   >
                     <Eye size={11} className="sm:w-[13px] sm:h-[13px]" />
                     <span>View</span>

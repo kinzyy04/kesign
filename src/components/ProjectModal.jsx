@@ -7,7 +7,7 @@ export const ProjectModal = ({ project, onClose }) => {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 md:p-10 overflow-y-auto">
+      <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 md:p-10 overflow-y-auto">
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -55,28 +55,28 @@ export const ProjectModal = ({ project, onClose }) => {
             </div>
 
             {/* Quick Metrics Bar */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 p-5 rounded-2xl bg-white border border-[#E5E5E5]">
+            <div className="grid grid-cols-3 gap-3 sm:gap-4 p-5 rounded-2xl bg-white border border-[#E5E5E5]">
               <div className="flex items-center gap-3">
                 <Layers className="text-[#111111]" size={20} />
                 <div>
-                  <div className="text-[10px] font-mono text-[#666666]">DELIVERABLES</div>
-                  <div className="text-sm font-bold text-[#111111] font-mono">{project.stats.slides} Slides / Pages</div>
+                  <div className="text-[10px] sm:text-xs font-mono text-[#666666]">DELIVERABLES</div>
+                  <div className="text-lg sm:text-2xl font-bold text-[#111111] font-mono">{project.stats.slides} Slides / Pages</div>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
                 <Clock className="text-[#111111]" size={20} />
                 <div>
-                  <div className="text-[10px] font-mono text-[#666666]">TURNAROUND</div>
-                  <div className="text-sm font-bold text-[#111111] font-mono">{project.stats.turnAround}</div>
+                  <div className="text-[10px] sm:text-xs font-mono text-[#666666]">TURNAROUND</div>
+                  <div className="text-lg sm:text-2xl font-bold text-[#111111] font-mono">{project.stats.turnAround}</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 col-span-2 sm:col-span-1">
+              <div className="flex items-center gap-3">
                 <Star className="text-[#111111]" size={20} />
                 <div>
-                  <div className="text-[10px] font-mono text-[#666666]">DESIGN QUALITY</div>
-                  <div className="text-sm font-bold text-[#111111] font-mono">{project.stats.rating}</div>
+                  <div className="text-[10px] sm:text-xs font-mono text-[#666666]">DESIGN QUALITY</div>
+                  <div className="text-lg sm:text-2xl font-bold text-[#111111] font-mono">{project.stats.rating}</div>
                 </div>
               </div>
             </div>
@@ -92,7 +92,7 @@ export const ProjectModal = ({ project, onClose }) => {
 
             {/* Challenge & Solution Grid */}
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="p-6 rounded-2xl bg-white border border-[#E5E5E5]">
+              <div className="p-4 sm:p-6 rounded-2xl bg-white border border-[#E5E5E5]">
                 <h3 className="text-xs font-mono text-[#111111] uppercase tracking-wider mb-3 font-semibold">
                   01 / The Creative Challenge
                 </h3>
@@ -101,7 +101,7 @@ export const ProjectModal = ({ project, onClose }) => {
                 </p>
               </div>
 
-              <div className="p-6 rounded-2xl bg-white border border-[#E5E5E5]">
+              <div className="p-4 sm:p-6 rounded-2xl bg-white border border-[#E5E5E5]">
                 <h3 className="text-xs font-mono text-[#111111] uppercase tracking-wider mb-3 font-semibold">
                   02 / Kesign Execution
                 </h3>
@@ -114,7 +114,7 @@ export const ProjectModal = ({ project, onClose }) => {
             {/* Deliverables List */}
             <div>
               <h3 className="text-lg font-bold text-[#111111] mb-4">Included Assets & Formats</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-2 sm:gap-3">
                 {project.deliverables.map((item) => (
                   <div key={item} className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-[#E5E5E5]">
                     <CheckCircle size={16} className="text-[#111111] shrink-0" />

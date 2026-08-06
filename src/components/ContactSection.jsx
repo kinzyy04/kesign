@@ -92,15 +92,15 @@ export const ContactSection = () => {
           <span className="text-xs uppercase font-mono tracking-widest text-[#666666]">07 / Let's Connect</span>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-12 gap-6 lg:gap-16 items-start">
           {/* Left Info Column */}
           <div className="lg:col-span-5 space-y-8">
-            <h2 className="text-4xl sm:text-6xl font-extrabold text-[#111111] tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-6xl font-extrabold text-[#111111] tracking-tight leading-tight">
               Let's build something <br />
               <span className="font-serif-italic text-transparent bg-clip-text bg-gradient-to-r from-[#FF5733] to-[#FF8C66]">memorable</span>.
             </h2>
 
-            <p className="text-base text-[#666666] leading-relaxed">
+            <p className="text-sm sm:text-base text-[#666666] leading-relaxed">
               Whether you're a startup, brand, or creator looking for stunning design — we're here for you. Reach out directly or send us your brief. We respond within 4 hours.
             </p>
 
@@ -126,12 +126,12 @@ export const ContactSection = () => {
             {/* Social Channels */}
             <div>
               <div className="text-xs font-mono text-[#666666] uppercase tracking-wider mb-4">SOCIAL NETWORKS</div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
                 <a
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E5E5E5] text-[#666666] hover:text-[#111111] hover:border-[#FF5733]/50 transition-all interactive-hover flex items-center gap-2 text-xs font-mono shadow-sm"
+                  className="p-2.5 sm:p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E5E5E5] text-[#666666] hover:text-[#111111] hover:border-[#FF5733]/50 transition-all interactive-hover flex items-center gap-2 text-[10px] sm:text-xs font-mono shadow-sm"
                 >
                   <Linkedin size={18} />
                   <span>LinkedIn</span>
@@ -141,7 +141,7 @@ export const ContactSection = () => {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E5E5E5] text-[#666666] hover:text-[#111111] hover:border-[#FF5733]/50 transition-all interactive-hover flex items-center gap-2 text-xs font-mono shadow-sm"
+                  className="p-2.5 sm:p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E5E5E5] text-[#666666] hover:text-[#111111] hover:border-[#FF5733]/50 transition-all interactive-hover flex items-center gap-2 text-[10px] sm:text-xs font-mono shadow-sm"
                 >
                   <Instagram size={18} />
                   <span>Instagram</span>
@@ -151,7 +151,7 @@ export const ContactSection = () => {
                   href="https://threads.net"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E5E5E5] text-[#666666] hover:text-[#111111] hover:border-[#FF5733]/50 transition-all interactive-hover flex items-center gap-2 text-xs font-mono shadow-sm"
+                  className="p-2.5 sm:p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E5E5E5] text-[#666666] hover:text-[#111111] hover:border-[#FF5733]/50 transition-all interactive-hover flex items-center gap-2 text-[10px] sm:text-xs font-mono shadow-sm"
                 >
                   <MessageCircle size={18} />
                   <span>Threads</span>
@@ -161,7 +161,7 @@ export const ContactSection = () => {
                   href="https://whatsapp.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E5E5E5] text-[#666666] hover:text-[#111111] hover:border-[#FF5733]/50 transition-all interactive-hover flex items-center gap-2 text-xs font-mono shadow-sm"
+                  className="p-2.5 sm:p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E5E5E5] text-[#666666] hover:text-[#111111] hover:border-[#FF5733]/50 transition-all interactive-hover flex items-center gap-2 text-[10px] sm:text-xs font-mono shadow-sm"
                 >
                   <Send size={18} />
                   <span>WhatsApp</span>
@@ -172,7 +172,7 @@ export const ContactSection = () => {
 
           {/* Form Column */}
           <div className="lg:col-span-7">
-            <div className="kyne-card rounded-3xl p-5 sm:p-10 border border-[#E5E5E5] relative bg-white/95 backdrop-blur-md shadow-xl">
+            <div className="kyne-card rounded-3xl p-4 sm:p-10 border border-[#E5E5E5] relative bg-white/95 backdrop-blur-md shadow-xl">
               <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#FF5733]/15 to-transparent rounded-full blur-3xl pointer-events-none" />
 
               {submitted ? (
@@ -194,7 +194,7 @@ export const ContactSection = () => {
                   {/* Row 1: Name & Phone */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-xs font-mono text-[#666666] uppercase mb-2">YOUR NAME</label>
+                      <label className="block text-[10px] sm:text-xs font-mono text-[#666666] uppercase mb-2">YOUR NAME</label>
                       <input
                         type="text"
                         required
@@ -206,7 +206,7 @@ export const ContactSection = () => {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono text-[#666666] uppercase mb-2">PHONE NUMBER</label>
+                      <label className="block text-[10px] sm:text-xs font-mono text-[#666666] uppercase mb-2">PHONE NUMBER</label>
                       <input
                         type="tel"
                         required
@@ -221,7 +221,7 @@ export const ContactSection = () => {
                   {/* Row 2: Email & Project */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-xs font-mono text-[#666666] uppercase mb-2">YOUR EMAIL</label>
+                      <label className="block text-[10px] sm:text-xs font-mono text-[#666666] uppercase mb-2">YOUR EMAIL</label>
                       <input
                         type="email"
                         required
@@ -233,7 +233,7 @@ export const ContactSection = () => {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono text-[#666666] uppercase mb-2">RELATED PROJECT</label>
+                      <label className="block text-[10px] sm:text-xs font-mono text-[#666666] uppercase mb-2">RELATED PROJECT</label>
                       <select
                         required
                         value={formData.project}
@@ -258,7 +258,7 @@ export const ContactSection = () => {
                         transition={{ duration: 0.3, ease: 'easeInOut' }}
                         className="overflow-hidden"
                       >
-                        <label className="block text-xs font-mono text-[#666666] uppercase mb-2">TELL US WHAT YOU NEED</label>
+                        <label className="block text-[10px] sm:text-xs font-mono text-[#666666] uppercase mb-2">TELL US WHAT YOU NEED</label>
                         <textarea
                           rows={3}
                           required

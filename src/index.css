@@ -75,8 +75,10 @@
   animation: marquee-scroll 40s linear infinite;
   width: max-content;
 }
-.marquee-track:hover {
-  animation-play-state: paused;
+@media (hover: hover) {
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
 }
 
 /* Hide scrollbar */

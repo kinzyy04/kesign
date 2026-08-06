@@ -44,7 +44,7 @@ export const Preloader = ({ onComplete }) => {
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6 }}
-              className="text-6xl sm:text-8xl md:text-9xl font-extrabold tracking-tighter text-[#111111] font-sans"
+              className="text-5xl sm:text-8xl md:text-9xl font-extrabold tracking-tighter text-[#111111] font-sans"
             >
               kesign<span className="font-serif-italic font-normal text-[#666666]">.</span>
             </motion.h1>
@@ -54,7 +54,7 @@ export const Preloader = ({ onComplete }) => {
             </p>
 
             {/* Minimal Progress Bar */}
-            <div className="mt-8 w-48 sm:w-64 h-[2px] bg-[#E5E5E5] overflow-hidden rounded-full">
+            <div className="mt-8 w-40 sm:w-64 h-[2px] bg-[#E5E5E5] overflow-hidden rounded-full">
               <motion.div
                 className="h-full bg-[#111111]"
                 style={{ width: `${progress}%` }}
@@ -68,7 +68,7 @@ export const Preloader = ({ onComplete }) => {
               ENGINEERING RIGOR.<br />HUMAN PRECISION.
             </div>
 
-            <div className="text-5xl sm:text-7xl font-light font-serif-italic text-[#111111] tracking-tighter">
+            <div className="text-4xl sm:text-7xl font-light font-serif-italic text-[#111111] tracking-tighter">
               {progress}<span className="text-2xl font-sans text-[#666666]">%</span>
             </div>
           </div>

@@ -14,10 +14,10 @@ export const TeamSection = () => {
               <span className="h-[1px] w-12 bg-[#111111]" />
               <span className="text-xs uppercase font-mono tracking-widest text-[#666666]">06 / Founders</span>
             </div>
-            <h2 className="text-4xl sm:text-6xl font-extrabold text-[#111111] tracking-tight">
+            <h2 className="text-3xl sm:text-6xl font-extrabold text-[#111111] tracking-tight">
               Meet the Team<span className="font-serif-italic text-[#666666]">.</span>
             </h2>
-            <p className="mt-3 text-3xl sm:text-5xl font-extrabold tracking-tight">
+            <p className="mt-3 text-2xl sm:text-5xl font-extrabold tracking-tight">
               <span className="text-[#111111]">Students of </span><span className="text-[#FF5733]">IIT Delhi</span>
             </p>
           </div>
@@ -27,7 +27,7 @@ export const TeamSection = () => {
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {TEAM_MEMBERS.map((member, index) => (
             <motion.div
               key={member.name}
@@ -35,11 +35,11 @@ export const TeamSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
-              className="kyne-card rounded-3xl p-6 hover:border-[#111111] transition-all duration-300 group flex flex-col justify-between interactive-hover"
+              className="kyne-card rounded-3xl p-3 sm:p-6 hover:border-[#111111] transition-all duration-300 group flex flex-col justify-between interactive-hover"
             >
               <div>
                 {/* Avatar Box */}
-                <div className="relative aspect-square rounded-2xl overflow-hidden mb-6 bg-[#E5E5E5] flex items-center justify-center">
+                <div className="relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden mb-6 bg-[#E5E5E5] flex items-center justify-center">
                   <img
                     src={member.avatar}
                     alt={member.name}
@@ -56,14 +56,14 @@ export const TeamSection = () => {
                 </div>
 
                 {/* Name & Role */}
-                <h3 className="text-xl font-bold text-[#111111]">
+                <h3 className="text-sm sm:text-xl font-bold text-[#111111]">
                   {member.name}
                 </h3>
-                <div className="text-xs font-mono text-[#666666] mt-1 uppercase tracking-wider">
+                <div className="text-[10px] sm:text-xs font-mono text-[#666666] mt-1 uppercase tracking-wider">
                   {member.role}
                 </div>
 
-                <p className="mt-3 text-xs text-[#666666] leading-relaxed">
+                <p className="mt-3 text-[10px] sm:text-xs text-[#666666] leading-snug line-clamp-3 sm:line-clamp-none">
                   {member.bio}
                 </p>
               </div>
@@ -75,7 +75,7 @@ export const TeamSection = () => {
                   href={member.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-[#F6F6F6] text-[#666666] hover:text-[#111111] hover:bg-[#E5E5E5] transition-colors"
+                  className="p-1.5 sm:p-2 rounded-full bg-[#F6F6F6] text-[#666666] hover:text-[#111111] hover:bg-[#E5E5E5] transition-colors"
                   aria-label={`${member.name} LinkedIn Profile`}
                 >
                   <Linkedin size={16} />

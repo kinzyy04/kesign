@@ -55,7 +55,7 @@ export const WorkRibbonShowcase = () => {
             <span className="h-[1px] w-12 bg-[#111111]" />
             <span className="text-xs uppercase font-mono tracking-widest text-[#666666]">03 / Featured Visuals</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-[#111111] tracking-tight">
+          <h2 className="text-2xl sm:text-5xl font-extrabold text-[#111111] tracking-tight">
             Work in Motion<span className="font-serif-italic text-[#FF5733]">.</span>
           </h2>
         </div>
@@ -67,20 +67,20 @@ export const WorkRibbonShowcase = () => {
       </div>
 
       {/* Tilted Ribbon Container */}
-      <div className="relative w-full overflow-hidden py-10 -rotate-2 sm:-rotate-3 scale-[1.03]">
+      <div className="relative w-full overflow-hidden py-10 -rotate-1 sm:-rotate-3 scale-[1.03]">
 
         {/* Edge fades */}
-        <div className="absolute top-0 left-0 bottom-0 w-24 sm:w-48 bg-gradient-to-r from-[#F6F6F6] to-transparent z-20 pointer-events-none" />
-        <div className="absolute top-0 right-0 bottom-0 w-24 sm:w-48 bg-gradient-to-l from-[#F6F6F6] to-transparent z-20 pointer-events-none" />
+        <div className="absolute top-0 left-0 bottom-0 w-16 sm:w-48 bg-gradient-to-r from-[#F6F6F6] to-transparent z-20 pointer-events-none" />
+        <div className="absolute top-0 right-0 bottom-0 w-16 sm:w-48 bg-gradient-to-l from-[#F6F6F6] to-transparent z-20 pointer-events-none" />
 
         {/* Row 1 — scrolls left */}
-        <div className="flex w-max gap-6 mb-6 animate-marquee-left hover:[animation-play-state:paused]">
+        <div className="flex w-max gap-6 mb-6 animate-marquee-left">
           {row1Triple.map((item, idx) => (
             <motion.div
               key={`r1-${item.id}-${idx}`}
               whileHover={{ y: -6, scale: 1.02 }}
               transition={{ duration: 0.25 }}
-              className="w-80 sm:w-[380px] shrink-0 rounded-2xl overflow-hidden shadow-md border border-[#E5E5E5] bg-white group relative"
+              className="w-64 sm:w-[380px] shrink-0 rounded-2xl overflow-hidden shadow-md border border-[#E5E5E5] bg-white group relative"
             >
               {/* Uniform aspect-ratio frame */}
               <div className="relative aspect-[16/10] w-full overflow-hidden bg-black flex items-center justify-center">
@@ -104,13 +104,13 @@ export const WorkRibbonShowcase = () => {
         </div>
 
         {/* Row 2 — scrolls right */}
-        <div className="flex w-max gap-6 animate-marquee-right hover:[animation-play-state:paused]">
+        <div className="flex w-max gap-6 animate-marquee-right">
           {row2Triple.map((item, idx) => (
             <motion.div
               key={`r2-${item.id}-${idx}`}
               whileHover={{ y: -6, scale: 1.02 }}
               transition={{ duration: 0.25 }}
-              className="w-80 sm:w-[380px] shrink-0 rounded-2xl overflow-hidden shadow-md border border-[#E5E5E5] bg-white group relative"
+              className="w-64 sm:w-[380px] shrink-0 rounded-2xl overflow-hidden shadow-md border border-[#E5E5E5] bg-white group relative"
             >
               {/* Uniform aspect-ratio frame */}
               <div className="relative aspect-[16/10] w-full overflow-hidden bg-black flex items-center justify-center">

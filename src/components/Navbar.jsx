@@ -58,7 +58,7 @@ export const Navbar = () => {
         <div className="flex items-center gap-4">
           <a
             href="#contact"
-            className="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#111111] text-white font-semibold text-xs font-mono uppercase tracking-wider hover:bg-[#FF5733] transition-all duration-300 interactive-hover shadow-sm"
+            className="hidden lg:inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#111111] text-white font-semibold text-xs font-mono uppercase tracking-wider hover:bg-[#FF5733] transition-all duration-300 interactive-hover shadow-sm"
           >
             <span>[LET'S TALK]</span>
             <ArrowUpRight size={14} />
@@ -81,9 +81,9 @@ export const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-[#F6F6F6] border-b border-[#E5E5E5] px-6 py-6"
+            className="lg:hidden bg-[#F6F6F6] border-b border-[#E5E5E5] px-6 py-6 pb-8"
           >
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3">
               {navLinks.map((link) => (
                 <a
                   key={link.name}

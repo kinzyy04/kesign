@@ -21,7 +21,7 @@ export const CategoryWorkModal = ({ category, onClose }) => {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 md:p-10 overflow-y-auto">
+      <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 md:p-10 overflow-y-auto">
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -65,12 +65,12 @@ export const CategoryWorkModal = ({ category, onClose }) => {
             </p>
 
             {/* Projects Grid in Modal */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-3 sm:gap-6">
               {categoryProjects.map((project) => (
                 <div
                   key={project.id}
                   onClick={() => setSelectedSingleProject(project)}
-                  className="kyne-card rounded-2xl overflow-hidden cursor-pointer hover:border-[#FF5733] transition-all group interactive-hover bg-white p-5 flex flex-col justify-between"
+                  className="kyne-card rounded-2xl overflow-hidden cursor-pointer hover:border-[#FF5733] transition-all group interactive-hover bg-white p-3 sm:p-5 flex flex-col justify-between"
                 >
                   <div>
                     <div className="relative aspect-[16/10] rounded-xl overflow-hidden bg-black mb-4 flex items-center justify-center">
