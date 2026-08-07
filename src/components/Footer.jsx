@@ -24,7 +24,7 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-[#E5E5E5]">
           {/* Brand Col */}
-          <div className="md:col-span-5 space-y-4">
+          <div className="md:col-span-6 space-y-4">
             <a href="#" className="inline-block text-3xl sm:text-4xl font-extrabold tracking-tighter text-[#111111]">
               kesign<span className="font-serif-italic text-[#666666]">.</span>
             </a>
@@ -37,20 +37,9 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Nav Col */}
-          <div className="md:col-span-3 space-y-3">
-            <div className="text-xs font-mono text-[#666666] uppercase tracking-wider mb-4">NAVIGATION</div>
-            <ul className="flex flex-wrap sm:flex-col gap-3 sm:gap-0 sm:space-y-2 text-xs font-mono text-[#666666]">
-              <li><a href="#team" className="hover:text-[#111111] transition-colors">Meet the Founders</a></li>
-              <li><a href="#services" className="hover:text-[#111111] transition-colors">Services &amp; Capabilities</a></li>
-
-              <li><a href="#services" className="hover:text-[#111111] transition-colors">Concept Portfolio</a></li>
-              <li><a href="#ai-philosophy" className="hover:text-[#111111] transition-colors">Our Philosophy</a></li>
-            </ul>
-          </div>
 
           {/* Founders Col */}
-          <div className="md:col-span-4 space-y-3">
+          <div className="md:col-span-6 space-y-3">
             <div className="text-xs font-mono text-[#666666] uppercase tracking-wider mb-4">FOUNDED BY</div>
             <div className="grid grid-cols-2 gap-2 text-xs font-mono text-[#666666]">
               <div>Krinjal Agrawal</div>
