@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Clock, Layers, Star, CheckCircle, ArrowRight } from 'lucide-react';
 
 export const ProjectModal = ({ project, onClose }) => {
+  useEffect(() => {
+    if (!project) return;
+    const current = parseInt(document.body.dataset.modalCount || '0', 10);
+    document.body.dataset.modalCount = current + 1;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      const cur = parseInt(document.body.dataset.modalCount || '1', 10);
+      const next = Math.max(0, cur - 1);
+      document.body.dataset.modalCount = next;
+      if (next === 0) document.body.style.overflow = '';
+    };
+  }, [project]);
+
   if (!project) return null;
 
   return (

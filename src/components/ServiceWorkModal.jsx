@@ -8,11 +8,17 @@ export const ServiceWorkModal = ({ service, onClose }) => {
   useEffect(() => {
     if (service) {
       setActiveIndex(0);
+      // Increment open-modal counter on body to track nested modals
+      const current = parseInt(document.body.dataset.modalCount || '0', 10);
+      document.body.dataset.modalCount = current + 1;
       document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
     }
-    return () => { document.body.style.overflow = ''; };
+    return () => {
+      const current = parseInt(document.body.dataset.modalCount || '1', 10);
+      const next = Math.max(0, current - 1);
+      document.body.dataset.modalCount = next;
+      if (next === 0) document.body.style.overflow = '';
+    };
   }, [service]);
 
   useEffect(() => {

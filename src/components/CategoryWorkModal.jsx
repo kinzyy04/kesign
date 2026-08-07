@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight, CheckCircle, Clock, Layers, Star, Eye } from 'lucide-react';
 import { PORTFOLIO_PROJECTS } from '../data/portfolioData';
@@ -6,6 +6,19 @@ import { ProjectModal } from './ProjectModal';
 
 export const CategoryWorkModal = ({ category, onClose }) => {
   const [selectedSingleProject, setSelectedSingleProject] = useState(null);
+
+  useEffect(() => {
+    if (!category) return;
+    const current = parseInt(document.body.dataset.modalCount || '0', 10);
+    document.body.dataset.modalCount = current + 1;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      const cur = parseInt(document.body.dataset.modalCount || '1', 10);
+      const next = Math.max(0, cur - 1);
+      document.body.dataset.modalCount = next;
+      if (next === 0) document.body.style.overflow = '';
+    };
+  }, [category]);
 
   if (!category) return null;
 

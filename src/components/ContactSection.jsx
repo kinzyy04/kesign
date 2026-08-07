@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Copy, Check, ArrowUpRight, Linkedin, Instagram, MessageCircle, Send, Loader2, Phone } from 'lucide-react';
 
@@ -27,13 +27,24 @@ export const ContactSection = () => {
     project: '',
     otherProject: '',
   });
+  // Track copy timeout so it can be cleared if component unmounts
+  const copyTimeoutRef = useRef(null);
+
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      if (copyTimeoutRef.current) clearTimeout(copyTimeoutRef.current);
+    };
+  }, []);
 
   const email = 'kesign04@gmail.com';
 
   const copyEmail = () => {
     navigator.clipboard.writeText(email);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    // Clear any previous pending reset
+    if (copyTimeoutRef.current) clearTimeout(copyTimeoutRef.current);
+    copyTimeoutRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const handleSubmit = async (e) => {

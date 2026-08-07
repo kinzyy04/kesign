@@ -6,11 +6,12 @@ export const Preloader = ({ onComplete }) => {
   const [isFinished, setIsFinished] = useState(false);
 
   useEffect(() => {
+    let completionTimeout;
     const timer = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(timer);
-          setTimeout(() => {
+          completionTimeout = setTimeout(() => {
             setIsFinished(true);
             if (onComplete) onComplete();
           }, 300);
@@ -21,7 +22,10 @@ export const Preloader = ({ onComplete }) => {
       });
     }, 50);
 
-    return () => clearInterval(timer);
+    return () => {
+      clearInterval(timer);
+      clearTimeout(completionTimeout);
+    };
   }, [onComplete]);
 
   return (
