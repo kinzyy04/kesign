@@ -46,7 +46,7 @@ export const Preloader = ({ onComplete }) => {
               transition={{ duration: 0.6 }}
               className="text-5xl sm:text-8xl md:text-9xl font-extrabold tracking-tighter text-[#111111] font-sans"
             >
-              kesign<span className="font-serif-italic font-normal text-[#666666]">.</span>
+              kesign<span className="text-[#FF5733]">.</span>
             </motion.h1>
             
             <p className="mt-4 text-xs sm:text-sm text-[#666666] tracking-widest uppercase font-mono">

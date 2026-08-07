@@ -43,9 +43,7 @@ export const HeroSection = () => {
             <h1 className="text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-[#111111] leading-[0.95] tracking-tight font-serif-italic">
               crafting futures by<br />
               <span className="font-sans font-extrabold not-italic tracking-tighter">kesign</span><span className="text-[#FF5733]">.</span><br />
-              <span className="font-sans font-extrabold not-italic tracking-tighter text-[#111111]">
-                Design<span className="text-[#FF5733] font-sans font-bold">.</span>
-              </span><br />
+              <span className="font-sans font-extrabold not-italic tracking-tighter text-[#111111]">Design</span><span className="text-[#111111]">.</span><br />
               <span className="text-xl sm:text-4xl md:text-5xl lg:text-6xl font-serif-italic font-normal text-[#666666] tracking-normal block -mt-1 sm:-mt-2">
                 by IITD Students
               </span>
