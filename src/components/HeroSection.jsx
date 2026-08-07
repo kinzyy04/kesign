@@ -50,7 +50,7 @@ export const HeroSection = () => {
             </h1>
 
             <p className="mt-8 max-w-2xl text-sm sm:text-xl text-[#444444] font-normal leading-relaxed font-sans">
-              Founded by four engineering students from IIT Delhi. From premium pitch decks &amp; luxury brand assets to complete creative solutions — we craft designs that help you grow beyond boundaries.
+              Founded by three engineering students from IIT Delhi. From premium pitch decks &amp; luxury brand assets to complete creative solutions — we craft designs that help you grow beyond boundaries.
             </p>
           </motion.div>
         </div>

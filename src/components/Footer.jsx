@@ -29,7 +29,7 @@ export const Footer = () => {
               kesign<span className="font-serif-italic text-[#666666]">.</span>
             </a>
             <p className="text-xs text-[#666666] max-w-sm leading-relaxed font-normal">
-              High-performance creative studio founded by four IIT Delhi engineers. World-class design that speaks louder than words.
+              High-performance creative studio founded by three IIT Delhi engineers. World-class design that speaks louder than words.
             </p>
             <div className="flex items-center gap-3 text-xs font-mono text-[#666666]">
               <span className="w-2 h-2 rounded-full bg-[#111111] animate-pulse" />
@@ -45,7 +45,6 @@ export const Footer = () => {
               <div>Krinjal Agrawal</div>
               <div>Kshitija Karmore</div>
               <div>Krishna Thakur</div>
-              <div>Krishan Sawariya</div>
             </div>
             <div className="pt-4 text-[10px] font-mono text-[#111111] font-semibold">
               IIT DELHI ENGINEERS

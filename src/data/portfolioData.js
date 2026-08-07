@@ -218,22 +218,13 @@ export const TEAM_MEMBERS = [
   },
   {
     name: "Krishna Thakur",
-    role: "Co-Founder & Motion Lead",
+    role: "Co-Founder & Creative Strategist",
     education: "Engineering Student, IIT Delhi",
-    bio: "Crafting fluid micro-animations, cinematic pitch deck visuals, and interactive digital experiences.",
+    bio: "Bridging engineering rigor with brand strategy, content positioning, and rapid client execution.",
     linkedin: "https://linkedin.com/in/krishna-thakur",
     avatar: "/assets/krishna.png",
     objectPosition: "center 15%",
     initials: "KT"
-  },
-  {
-    name: "Krishan Sawariya",
-    role: "Co-Founder & Creative Strategist",
-    education: "Engineering Student, IIT Delhi",
-    bio: "Bridging engineering rigor with brand strategy, content positioning, and rapid client execution.",
-    linkedin: "https://linkedin.com/in/krishan-sawariya",
-    avatar: "/assets/krishan.png",
-    initials: "KS"
   }
 ];
 

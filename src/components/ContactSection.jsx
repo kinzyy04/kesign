@@ -153,7 +153,7 @@ export const ContactSection = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-[#111111]">Inquiry Received!</h3>
                   <p className="text-sm text-[#666666] max-w-md mx-auto">
-                    Thank you for reaching out to <span className="text-[#111111] font-bold">kesign</span>. One of our 4 IIT Delhi founders will reach out to you within 4 hours.
+                    Thank you for reaching out to <span className="text-[#111111] font-bold">kesign</span>. One of our 3 IIT Delhi founders will reach out to you within 4 hours.
                   </p>
                 </motion.div>
               ) : (

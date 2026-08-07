@@ -1,6 +1,6 @@
 # Kesign - Premium Design Studio
 
-Founded by four IIT Delhi engineers (Krinjal Agrawal, Kshitija Karmore, Krishna Thakur, and Krishan Sawariya).
+Founded by three IIT Delhi engineers (Krinjal Agrawal, Kshitija Karmore, and Krishna Thakur).
 
 ## 🚀 Quick Setup Instructions
 

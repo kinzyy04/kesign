@@ -27,7 +27,7 @@ export const AboutSection = () => {
           {/* Detailed Content Right */}
           <div className="lg:col-span-7 space-y-8 text-base sm:text-lg text-[#666666] font-normal leading-relaxed">
             <p>
-              We are four engineering students from <span className="text-[#111111] font-semibold">IIT Delhi</span> building an AI-assisted creative studio that delivers world-class design work for startups, brands, and creators.
+              We are three engineering students from <span className="text-[#111111] font-semibold">IIT Delhi</span> building an AI-assisted creative studio that delivers world-class design work for startups, brands, and creators.
             </p>
 
             <p>
@@ -35,7 +35,7 @@ export const AboutSection = () => {
             </p>
 
             <p className="text-[#111111] font-medium">
-              The "K" in kesign represents our four founders — Krinjal, Kshitija, Krishna, and Krishan.
+              The "K" in kesign represents our three founders — Krinjal, Kshitija, and Krishna.
               Together, we craft designs that push boundaries and elevate brands.
             </p>
 
