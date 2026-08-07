@@ -123,51 +123,7 @@ export const ContactSection = () => {
               </button>
             </div>
 
-            {/* Social Channels */}
-            <div>
-              <div className="text-xs font-mono text-[#666666] uppercase tracking-wider mb-4">SOCIAL NETWORKS</div>
-              <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2.5 sm:p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E5E5E5] text-[#666666] hover:text-[#111111] hover:border-[#FF5733]/50 transition-all interactive-hover flex items-center gap-2 text-[10px] sm:text-xs font-mono shadow-sm"
-                >
-                  <Linkedin size={18} />
-                  <span>LinkedIn</span>
-                </a>
 
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2.5 sm:p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E5E5E5] text-[#666666] hover:text-[#111111] hover:border-[#FF5733]/50 transition-all interactive-hover flex items-center gap-2 text-[10px] sm:text-xs font-mono shadow-sm"
-                >
-                  <Instagram size={18} />
-                  <span>Instagram</span>
-                </a>
-
-                <a
-                  href="https://threads.net"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2.5 sm:p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E5E5E5] text-[#666666] hover:text-[#111111] hover:border-[#FF5733]/50 transition-all interactive-hover flex items-center gap-2 text-[10px] sm:text-xs font-mono shadow-sm"
-                >
-                  <MessageCircle size={18} />
-                  <span>Threads</span>
-                </a>
-
-                <a
-                  href="https://whatsapp.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2.5 sm:p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E5E5E5] text-[#666666] hover:text-[#111111] hover:border-[#FF5733]/50 transition-all interactive-hover flex items-center gap-2 text-[10px] sm:text-xs font-mono shadow-sm"
-                >
-                  <Send size={18} />
-                  <span>WhatsApp</span>
-                </a>
-              </div>
-            </div>
           </div>
 
           {/* Form Column */}
