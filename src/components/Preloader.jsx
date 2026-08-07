@@ -50,7 +50,7 @@ export const Preloader = ({ onComplete }) => {
             </motion.h1>
             
             <p className="mt-4 text-xs sm:text-sm text-[#666666] tracking-widest uppercase font-mono">
-              Design with a K
+              Design with us
             </p>
 
             {/* Minimal Progress Bar */}

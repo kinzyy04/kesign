@@ -20,7 +20,7 @@ export const AboutSection = () => {
               <span className="font-serif-italic font-normal text-[#444444]">design excellence</span>.
             </h2>
             <p className="mt-6 text-xs font-mono text-[#666666] uppercase tracking-wider">
-              "Kesign" — Design with a K.
+              "Kesign" — Design with us.
             </p>
           </div>
 

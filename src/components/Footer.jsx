@@ -56,7 +56,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] sm:text-xs font-mono text-[#666666]">
           <div>
-            © {new Date().getFullYear()} kesign studio. All rights reserved. Design with a K.
+            © {new Date().getFullYear()} kesign studio. All rights reserved. Design with us.
           </div>
 
           <button
