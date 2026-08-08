@@ -125,12 +125,12 @@ export const ServicesSection = () => {
       title: 'Custom Design Solutions',
       tag: 'TAILORED TO YOUR BRAND',
       description: 'Have something unique in mind? We craft fully bespoke design solutions tailored precisely to your brand vision, audience, and goals.',
-      bannerImage: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop',
+      bannerImage: '/assets/custom_design_business_card_1.jpg',
       stats: 'FULLY BESPOKE',
       gallery: [
-        'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1400&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1400&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?q=80&w=1400&auto=format&fit=crop',
+        '/assets/custom_design_business_card_1.jpg',
+        '/assets/custom_design_business_card_2.jpg',
+        '/assets/custom_design_business_card_3.jpg',
       ],
     },
   ];

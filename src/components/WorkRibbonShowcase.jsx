@@ -33,7 +33,9 @@ const allWorkImages = [
   { id: 'w-21', src: '/assets/work_merch_tshirt_1.png', label: 'Merchandise' },
   { id: 'w-24', src: '/assets/work_merch_kit_2.jpg', label: 'Merchandise' },
   { id: 'w-25', src: '/assets/work_merch_bottle_4.jpg', label: 'Merchandise' },
-  { id: 'w-22', src: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=900&auto=format&fit=crop', label: 'Custom Design' },
+  { id: 'w-22', src: '/assets/custom_design_business_card_1.jpg', label: 'Custom Design' },
+  { id: 'w-28', src: '/assets/custom_design_business_card_2.jpg', label: 'Custom Design' },
+  { id: 'w-29', src: '/assets/custom_design_business_card_3.jpg', label: 'Custom Design' },
 ];
 
 // Interleave items evenly across row 1 and row 2 for balanced visual variety
