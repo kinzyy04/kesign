@@ -70,10 +70,9 @@ export const ServicesSection = () => {
       title: 'Teaching Assets',
       tag: 'WORKSHEETS · NOTES · ASSESSMENTS',
       description: 'Beautifully designed worksheets, study notes, assessments, and educational handouts that make learning clear and engaging.',
-      bannerImage: '/assets/work_teaching_assests_10.jpg',
+      bannerImage: '/assets/work_teaching_assests_11.jpg',
       stats: 'EDITABLE TEMPLATES',
       gallery: [
-        '/assets/work_teaching_assests_10.jpg',
         '/assets/work_teaching_assests_11.jpg',
         '/assets/work_teaching_assests_12.jpg',
         '/assets/work_teaching_assests_13.jpg',

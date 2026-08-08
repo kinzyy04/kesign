@@ -9,7 +9,6 @@ const allWorkImages = [
   { id: 'w-2', src: '/assets/work_deck_2.jpg', label: 'Poem Analysis Slide' },
   { id: 'w-3', src: '/assets/work_deck_3.jpg', label: 'Physics Trajectory Deck' },
   // Real Uploaded Work - Teaching Assets
-  { id: 'w-4', src: '/assets/work_teaching_assests_10.jpg', label: 'Formula Cheat Sheet' },
   { id: 'w-5', src: '/assets/work_teaching_assests_11.jpg', label: 'Physics Revision Notes' },
   { id: 'w-6', src: '/assets/work_teaching_assests_12.jpg', label: 'Python Recursion Sheet' },
   { id: 'w-7', src: '/assets/work_teaching_assests_13.jpg', label: 'Poem Themes Study Note' },
