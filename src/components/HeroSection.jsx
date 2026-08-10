@@ -59,7 +59,7 @@ export const HeroSection = () => {
       {/* Bottom Scroll Down & Explore Indicator over the Semi-Circular Orb */}
       <div className="relative z-10 w-full pt-12 flex flex-col items-center justify-center">
         <motion.a
-          href="#team"
+          href="#services"
           animate={{ y: [0, 6, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
           className="inline-flex items-center gap-2 text-xs font-mono tracking-widest text-[#111111] uppercase hover:opacity-80 transition-opacity interactive-hover bg-white/80 backdrop-blur-md px-6 py-2.5 rounded-full border border-black/10 shadow-md font-semibold"

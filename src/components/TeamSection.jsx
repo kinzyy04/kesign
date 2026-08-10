@@ -71,15 +71,17 @@ export const TeamSection = () => {
               {/* Card Footer / Social */}
               <div className="mt-4 pt-3 border-t border-[#E5E5E5] flex items-center justify-between">
                 <span className="text-[10px] font-mono text-[#666666]">ENGINEERING STUDENT</span>
-                <a
-                  href={member.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-1.5 sm:p-2 rounded-full bg-[#F6F6F6] text-[#666666] hover:text-[#111111] hover:bg-[#E5E5E5] transition-colors"
-                  aria-label={`${member.name} LinkedIn Profile`}
-                >
-                  <Linkedin size={14} />
-                </a>
+                {member.linkedin && (
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-1.5 sm:p-2 rounded-full bg-[#F6F6F6] text-[#666666] hover:text-[#111111] hover:bg-[#E5E5E5] transition-colors"
+                    aria-label={`${member.name} LinkedIn Profile`}
+                  >
+                    <Linkedin size={14} />
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}

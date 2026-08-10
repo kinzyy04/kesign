@@ -202,7 +202,7 @@ export const TEAM_MEMBERS = [
     role: "Co-Founder & Systems Architect",
     education: "Engineering Student, IIT Delhi",
     bio: "Pioneering high-performance design automation, generative workflows, and creative systems.",
-    linkedin: "https://linkedin.com/in/krinjal-agrawal",
+    linkedin: "https://www.linkedin.com/in/krinjal-agrawal-202103381",
     avatar: "/assets/krinjal.png",
     objectPosition: "center 20%",
     initials: "KA"
@@ -212,7 +212,7 @@ export const TEAM_MEMBERS = [
     role: "Co-Founder & Visual Lead",
     education: "Engineering Student, IIT Delhi",
     bio: "Specializing in luxury brand architecture, high-end editorial design systems, and visual typography.",
-    linkedin: "https://linkedin.com/in/kshitija-karmore",
+    linkedin: "https://www.linkedin.com/in/kshitija-karmore-9945a9380",
     avatar: "/assets/kshitija.png",
     initials: "KK"
   },
@@ -221,7 +221,7 @@ export const TEAM_MEMBERS = [
     role: "Co-Founder & Creative Strategist",
     education: "Engineering Student, IIT Delhi",
     bio: "Bridging engineering rigor with brand strategy, content positioning, and rapid client execution.",
-    linkedin: "https://linkedin.com/in/krishna-thakur",
+    linkedin: "",
     avatar: "/assets/krishna.png",
     objectPosition: "center 15%",
     initials: "KT"
