@@ -225,6 +225,16 @@ export const TEAM_MEMBERS = [
     avatar: "/assets/krishna.png",
     objectPosition: "center 15%",
     initials: "KT"
+  },
+  {
+    name: "Krishan Sawariya",
+    role: "Co-Founder",
+    education: "B.Tech Student, IIT Delhi",
+    bio: "Bringing dynamic engineering perspective and operational execution to our creative studio.",
+    linkedin: "",
+    avatar: "/assets/krishan.png",
+    objectPosition: "center 15%",
+    initials: "KS"
   }
 ];
 
