@@ -22,12 +22,12 @@ export const TeamSection = () => {
             </p>
           </div>
           <p className="max-w-md text-xs text-[#666666] font-mono uppercase tracking-wider">
-            Three IIT Delhi engineers driving the next evolution of AI-assisted design.
+            Four IIT Delhi engineers driving the next evolution of AI-assisted design.
           </p>
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-3 gap-2 sm:gap-5">
+        <div className="grid grid-cols-4 gap-2 sm:gap-5">
           {TEAM_MEMBERS.map((member, index) => (
             <motion.div
               key={member.name}
