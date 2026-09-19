@@ -73,7 +73,7 @@ export const WorkRibbonShowcase = ({ onSelectProject }) => {
             <div
               key={`row1-${idx}`}
               onClick={() => handleItemClick(item)}
-              className="group relative w-64 sm:w-80 md:w-96 aspect-[16/10] rounded-2xl overflow-hidden bg-black border border-[#E5E5E5] shrink-0 cursor-pointer shadow-sm hover:shadow-xl hover:border-[#FF5733]/50 transition-all duration-300"
+              className="group relative w-56 sm:w-80 md:w-96 aspect-[4/3] sm:aspect-[16/10] rounded-2xl overflow-hidden bg-black border border-[#E5E5E5] shrink-0 cursor-pointer shadow-sm hover:shadow-xl hover:border-[#FF5733]/50 transition-all duration-300"
             >
               <img
                 src={item.src}
@@ -107,7 +107,7 @@ export const WorkRibbonShowcase = ({ onSelectProject }) => {
             <div
               key={`row2-${idx}`}
               onClick={() => handleItemClick(item)}
-              className="group relative w-64 sm:w-80 md:w-96 aspect-[16/10] rounded-2xl overflow-hidden bg-black border border-[#E5E5E5] shrink-0 cursor-pointer shadow-sm hover:shadow-xl hover:border-[#FF5733]/50 transition-all duration-300"
+              className="group relative w-56 sm:w-80 md:w-96 aspect-[4/3] sm:aspect-[16/10] rounded-2xl overflow-hidden bg-black border border-[#E5E5E5] shrink-0 cursor-pointer shadow-sm hover:shadow-xl hover:border-[#FF5733]/50 transition-all duration-300"
             >
               <img
                 src={item.src}

@@ -35,11 +35,11 @@ export const TeamSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
-              className="kyne-card rounded-3xl p-6 hover:border-[#111111] transition-all duration-300 group flex flex-col justify-between interactive-hover"
+              className="kyne-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 hover:border-[#111111] transition-all duration-300 group flex flex-col justify-between interactive-hover"
             >
               <div>
                 {/* Avatar Box */}
-                <div className="relative aspect-square rounded-2xl overflow-hidden mb-6 bg-[#E5E5E5] flex items-center justify-center">
+                <div className="relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden mb-3.5 sm:mb-6 bg-[#E5E5E5] flex items-center justify-center">
                   <img
                     src={member.avatar}
                     alt={`${member.name} — Co-Founder Kesign`}
@@ -56,21 +56,21 @@ export const TeamSection = () => {
                 </div>
 
                 {/* Name & Role */}
-                <h3 className="text-lg sm:text-xl font-bold text-[#111111]">
+                <h3 className="text-base sm:text-xl font-bold text-[#111111]">
                   {member.name}
                 </h3>
-                <div className="text-[11px] font-mono text-[#FF5733] font-semibold mt-1 uppercase tracking-wider">
+                <div className="text-[10px] sm:text-[11px] font-mono text-[#FF5733] font-semibold mt-0.5 sm:mt-1 uppercase tracking-wider">
                   {member.role}
                 </div>
 
-                <p className="mt-3 text-xs text-[#666666] leading-relaxed">
+                <p className="mt-2 sm:mt-3 text-[11px] sm:text-xs text-[#666666] leading-relaxed">
                   {member.bio}
                 </p>
               </div>
 
               {/* Card Footer / Social */}
-              <div className="mt-6 pt-4 border-t border-[#E5E5E5] flex items-center justify-between">
-                <span className="text-[10px] font-mono text-[#666666]">IIT DELHI</span>
+              <div className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-[#E5E5E5] flex items-center justify-between">
+                <span className="text-[9px] sm:text-[10px] font-mono text-[#666666]">IIT DELHI</span>
                 <a
                   href={member.linkedin}
                   target="_blank"

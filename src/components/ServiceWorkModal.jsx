@@ -51,30 +51,30 @@ export const ServiceWorkModal = ({ service, onClose }) => {
           onClick={(e) => e.stopPropagation()}
         >
           {/* Header Bar */}
-          <div className="px-6 py-4 border-b border-[#E5E5E5] bg-white flex items-center justify-between sticky top-0 z-20">
-            <div className="flex items-center gap-3">
-              <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-[#FF5733] text-white">
+          <div className="px-4 py-3 sm:px-6 sm:py-4 border-b border-[#E5E5E5] bg-white flex items-center justify-between sticky top-0 z-20">
+            <div className="flex items-center gap-2.5 sm:gap-3">
+              <span className="px-2 sm:px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-mono font-bold bg-[#FF5733] text-white">
                 {service.number}
               </span>
-              <h3 className="text-base sm:text-xl font-extrabold text-[#111111] tracking-tight">
+              <h3 className="text-sm sm:text-xl font-extrabold text-[#111111] tracking-tight">
                 {service.title}
               </h3>
             </div>
 
             <button
               onClick={onClose}
-              className="p-2 rounded-full bg-[#F6F6F6] text-[#666666] hover:text-[#111111] hover:bg-[#E5E5E5] transition-all"
+              className="p-1.5 sm:p-2 rounded-full bg-[#F6F6F6] text-[#666666] hover:text-[#111111] hover:bg-[#E5E5E5] transition-all"
               aria-label="Close modal"
             >
-              <X size={18} />
+              <X size={16} className="sm:w-[18px] sm:h-[18px]" />
             </button>
           </div>
 
           {/* Scrollable Content */}
-          <div className="overflow-y-auto p-4 sm:p-6 space-y-6">
+          <div className="overflow-y-auto p-3 sm:p-6 space-y-3.5 sm:space-y-6">
             
-            {/* Main Active Visual Showcase */}
-            <div className="relative aspect-[16/10] sm:aspect-[16/9] bg-black rounded-2xl overflow-hidden flex items-center justify-center border border-[#E5E5E5]">
+            {/* Main Active Visual Showcase - Dominant and big on mobile screens */}
+            <div className="relative aspect-[4/3] sm:aspect-[16/9] bg-[#0A0A0A] rounded-2xl overflow-hidden flex items-center justify-center border border-[#E5E5E5]">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={activeIndex}
@@ -93,35 +93,35 @@ export const ServiceWorkModal = ({ service, onClose }) => {
                 <>
                   <button
                     onClick={() => setActiveIndex(i => (i - 1 + service.gallery.length) % service.gallery.length)}
-                    className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 backdrop-blur-md text-white hover:bg-[#FF5733] transition-all"
+                    className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 p-1.5 sm:p-2 rounded-full bg-black/60 backdrop-blur-md text-white hover:bg-[#FF5733] transition-all"
                     aria-label="Previous artwork"
                   >
-                    <ChevronLeft size={20} />
+                    <ChevronLeft size={16} className="sm:w-5 sm:h-5" />
                   </button>
                   <button
                     onClick={() => setActiveIndex(i => (i + 1) % service.gallery.length)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 backdrop-blur-md text-white hover:bg-[#FF5733] transition-all"
+                    className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 p-1.5 sm:p-2 rounded-full bg-black/60 backdrop-blur-md text-white hover:bg-[#FF5733] transition-all"
                     aria-label="Next artwork"
                   >
-                    <ChevronRight size={20} />
+                    <ChevronRight size={16} className="sm:w-5 sm:h-5" />
                   </button>
                 </>
               )}
 
               {/* Counter badge */}
-              <div className="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-white text-[10px] font-mono uppercase">
+              <div className="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-black/70 backdrop-blur-md text-white text-[8.5px] sm:text-[10px] font-mono uppercase">
                 {activeIndex + 1} / {service.gallery.length} ASSETS
               </div>
             </div>
 
             {/* Thumbnail Strip */}
             {service.gallery.length > 1 && (
-              <div className="flex gap-2.5 overflow-x-auto pb-2 no-scrollbar">
+              <div className="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
                 {service.gallery.map((img, i) => (
                   <button
                     key={i}
                     onClick={() => setActiveIndex(i)}
-                    className={`relative w-24 sm:w-32 aspect-video rounded-xl overflow-hidden border-2 transition-all shrink-0 ${
+                    className={`relative w-16 sm:w-32 aspect-[4/3] sm:aspect-video rounded-lg sm:rounded-xl overflow-hidden border-2 transition-all shrink-0 ${
                       i === activeIndex ? 'border-[#FF5733] shadow-md ring-2 ring-[#FF5733]/20' : 'border-transparent opacity-60 hover:opacity-100'
                     }`}
                   >
@@ -131,24 +131,24 @@ export const ServiceWorkModal = ({ service, onClose }) => {
               </div>
             )}
 
-            {/* Category Description & Deliverables */}
-            <div className="grid md:grid-cols-12 gap-6 pt-2 border-t border-[#F0F0F0]">
-              <div className="md:col-span-8 space-y-3">
-                <span className="text-[10px] font-mono uppercase tracking-widest text-[#FF5733] font-semibold">
+            {/* Category Description & Deliverables - Compact on mobile */}
+            <div className="grid md:grid-cols-12 gap-3.5 sm:gap-6 pt-2 border-t border-[#F0F0F0]">
+              <div className="md:col-span-8 space-y-1.5 sm:space-y-3">
+                <span className="text-[8.5px] sm:text-[10px] font-mono uppercase tracking-widest text-[#FF5733] font-semibold">
                   {service.tag}
                 </span>
-                <h4 className="text-xl font-bold text-[#111111]">
+                <h4 className="text-sm sm:text-xl font-bold text-[#111111]">
                   Discipline Overview & Execution
                 </h4>
-                <p className="text-sm text-[#555555] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#555555] leading-relaxed">
                   {service.description}
                 </p>
 
                 {/* Tags */}
                 {service.tags && (
-                  <div className="flex flex-wrap gap-2 pt-2">
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-1 sm:pt-2">
                     {service.tags.map((tag) => (
-                      <span key={tag} className="px-3 py-1 rounded-full text-[11px] font-mono bg-[#F6F6F6] text-[#444444] border border-[#E5E5E5]">
+                      <span key={tag} className="px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[9.5px] sm:text-[11px] font-mono bg-[#F6F6F6] text-[#444444] border border-[#E5E5E5]">
                         #{tag}
                       </span>
                     ))}
@@ -156,13 +156,13 @@ export const ServiceWorkModal = ({ service, onClose }) => {
                 )}
               </div>
 
-              <div className="md:col-span-4 flex flex-col justify-between p-5 rounded-2xl bg-[#F6F6F6] border border-[#E5E5E5]">
+              <div className="md:col-span-4 flex flex-col justify-between p-3.5 sm:p-5 rounded-2xl bg-[#F6F6F6] border border-[#E5E5E5]">
                 <div>
-                  <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#111111] uppercase mb-2">
-                    <Sparkles size={14} className="text-[#FF5733]" />
+                  <div className="flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs font-mono font-bold text-[#111111] uppercase mb-1 sm:mb-2">
+                    <Sparkles size={13} className="text-[#FF5733]" />
                     <span>STUDIO TURNAROUND</span>
                   </div>
-                  <p className="text-xs text-[#666666] leading-relaxed">
+                  <p className="text-[10px] sm:text-xs text-[#666666] leading-relaxed">
                     Delivered in 24–48 hours with full vector source files & dedicated IIT Delhi creative direction.
                   </p>
                 </div>
@@ -170,10 +170,10 @@ export const ServiceWorkModal = ({ service, onClose }) => {
                 <a
                   href="#contact"
                   onClick={onClose}
-                  className="mt-6 w-full py-3 rounded-full bg-[#111111] text-white font-bold text-xs uppercase font-mono tracking-wider hover:bg-[#FF5733] transition-all flex items-center justify-center gap-2 shadow-md"
+                  className="mt-3 sm:mt-6 w-full py-2.5 sm:py-3 rounded-full bg-[#111111] text-white font-bold text-[10px] sm:text-xs uppercase font-mono tracking-wider hover:bg-[#FF5733] transition-all flex items-center justify-center gap-2 shadow-md"
                 >
                   <span>Discuss This Project</span>
-                  <ArrowUpRight size={14} />
+                  <ArrowUpRight size={13} className="sm:w-3.5 sm:h-3.5" />
                 </a>
               </div>
             </div>

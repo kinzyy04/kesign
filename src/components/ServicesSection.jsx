@@ -50,8 +50,8 @@ export const ServicesSection = () => {
               className="group rounded-2xl sm:rounded-3xl overflow-hidden border border-[#E5E5E5] bg-white shadow-sm hover:shadow-2xl hover:border-[#FF5733]/40 transition-all duration-500 flex flex-col cursor-pointer"
               onClick={() => setActiveModalCategory(cat)}
             >
-              {/* Image Preview Container */}
-              <div className="relative aspect-[16/10] overflow-hidden bg-black flex items-center justify-center">
+              {/* Image Preview Container - Large on phone so artwork is hero */}
+              <div className="relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden bg-black flex items-center justify-center">
                 <img
                   src={cat.bannerImage}
                   alt={cat.alt}
@@ -61,15 +61,15 @@ export const ServicesSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
 
                 {/* Number badge top-left */}
-                <div className="absolute top-2 left-2 sm:top-4 sm:left-4 z-10">
-                  <span className="px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[9px] sm:text-xs font-mono font-bold uppercase bg-black/60 backdrop-blur-md text-white border border-white/20">
+                <div className="absolute top-1.5 left-1.5 sm:top-4 sm:left-4 z-10">
+                  <span className="px-1.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[8px] sm:text-xs font-mono font-bold uppercase bg-black/60 backdrop-blur-md text-white border border-white/20">
                     {cat.number}
                   </span>
                 </div>
 
                 {/* Stats badge top-right */}
-                <div className="absolute top-2 right-2 sm:top-4 sm:right-4 z-10">
-                  <span className="px-1.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[7.5px] sm:text-[10px] font-mono uppercase backdrop-blur-md text-white border border-white/20 bg-black/60">
+                <div className="absolute top-1.5 right-1.5 sm:top-4 sm:right-4 z-10">
+                  <span className="px-1.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[7px] sm:text-[10px] font-mono uppercase backdrop-blur-md text-white border border-white/20 bg-black/60">
                     {cat.gallery.length} ASSETS
                   </span>
                 </div>
@@ -84,36 +84,36 @@ export const ServicesSection = () => {
                 </div>
               </div>
 
-              {/* Card Body */}
-              <div className="flex flex-col flex-1 p-3 sm:p-6 md:p-7">
+              {/* Card Body - Compact on mobile to keep focus on design */}
+              <div className="flex flex-col flex-1 p-2.5 sm:p-6 md:p-7">
                 {/* Tag */}
-                <span className="text-[8px] sm:text-[10px] font-mono uppercase tracking-wider sm:tracking-widest mb-1 sm:mb-2 text-[#888888] truncate">
+                <span className="text-[7.5px] sm:text-[10px] font-mono uppercase tracking-wider sm:tracking-widest mb-0.5 sm:mb-2 text-[#888888] truncate">
                   {cat.tag}
                 </span>
 
                 {/* Title */}
-                <h3 className="text-xs sm:text-xl md:text-2xl font-extrabold text-[#111111] tracking-tight leading-snug sm:leading-tight mb-1 sm:mb-3 group-hover:text-[#FF5733] transition-colors duration-300 line-clamp-2 sm:line-clamp-none">
+                <h3 className="text-xs sm:text-xl md:text-2xl font-bold sm:font-extrabold text-[#111111] tracking-tight leading-snug sm:leading-tight mb-1 sm:mb-3 group-hover:text-[#FF5733] transition-colors duration-300 line-clamp-1 sm:line-clamp-none">
                   {cat.title}
                 </h3>
 
-                {/* Description */}
-                <p className="text-[10px] sm:text-xs md:text-sm text-[#666666] leading-relaxed flex-1 mb-2.5 sm:mb-6 line-clamp-2 sm:line-clamp-none">
+                {/* Description - subtle and brief on mobile */}
+                <p className="text-[9px] sm:text-xs md:text-sm text-[#666666] leading-relaxed flex-1 mb-1.5 sm:mb-6 line-clamp-1 sm:line-clamp-none">
                   {cat.shortDesc}
                 </p>
 
                 {/* Action Bar */}
-                <div className="pt-2.5 sm:pt-4 border-t border-[#F0F0F0] flex items-center justify-between gap-1">
+                <div className="pt-2 sm:pt-4 border-t border-[#F0F0F0] flex items-center justify-between gap-1">
                   <button
                     onClick={(e) => { e.stopPropagation(); setActiveModalCategory(cat); }}
-                    className="inline-flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-1.5 sm:py-2 rounded-full bg-[#111111] text-white font-bold text-[9px] sm:text-xs font-mono uppercase tracking-wider hover:bg-[#FF5733] transition-all duration-300"
+                    className="inline-flex items-center gap-1 sm:gap-2 px-2.5 sm:px-4 py-1 sm:py-2 rounded-full bg-[#111111] text-white font-bold text-[8.5px] sm:text-xs font-mono uppercase tracking-wider hover:bg-[#FF5733] transition-all duration-300"
                   >
-                    <Eye size={11} className="sm:w-3.5 sm:h-3.5" />
+                    <Eye size={10} className="sm:w-3.5 sm:h-3.5" />
                     <span>View Work</span>
                   </button>
 
-                  <div className="text-[9px] sm:text-[11px] font-mono text-[#888888] flex items-center gap-0.5 sm:gap-1 group-hover:text-[#FF5733] transition-colors">
+                  <div className="text-[8.5px] sm:text-[11px] font-mono text-[#888888] flex items-center gap-0.5 sm:gap-1 group-hover:text-[#FF5733] transition-colors">
                     <span className="hidden sm:inline">EXPLORE</span>
-                    <ArrowUpRight size={12} className="sm:w-3.5 sm:h-3.5" />
+                    <ArrowUpRight size={11} className="sm:w-3.5 sm:h-3.5" />
                   </div>
                 </div>
               </div>
