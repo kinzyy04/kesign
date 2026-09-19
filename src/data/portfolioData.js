@@ -16,9 +16,7 @@ export const PRIMARY_CATEGORIES = [
       "/assets/portfolio/advertising-campaign-poster-minimal.webp",
       "/assets/portfolio/advertising-promotional-banner-modern.webp",
       "/assets/portfolio/advertising-visual-composition-creative.webp",
-      "/assets/portfolio/advertising-digital-campaign-graphics.webp",
-      "/assets/portfolio/advertising-hair-studio-promotional-poster.webp",
-      "/assets/portfolio/advertising-jee-advanced-course-campaign.webp"
+      "/assets/portfolio/advertising-digital-campaign-graphics.webp"
     ]
   },
   {
@@ -58,7 +56,6 @@ export const PRIMARY_CATEGORIES = [
       "/assets/portfolio/ecommerce-form-linen-apparel.webp",
       "/assets/portfolio/ecommerce-skincare-product-feature.webp",
       "/assets/portfolio/ecommerce-cosmetic-packaging-visual.webp",
-      "/assets/portfolio/ecommerce-fashion-lookbook-campaign.webp",
       "/assets/portfolio/ecommerce-d2c-product-showcase.webp",
       "/assets/portfolio/ecommerce-minimal-product-display.webp",
       "/assets/portfolio/ecommerce-product-packaging-mockup.webp"
@@ -118,12 +115,7 @@ export const PRIMARY_CATEGORIES = [
     gallery: [
       "/assets/portfolio/infographics-data-visualization-matrix.webp",
       "/assets/portfolio/infographics-process-flowchart-system.webp",
-      "/assets/portfolio/infographics-explainer-visual-narrative.webp",
-      "/assets/portfolio/infographics-neet-cardiac-anatomy.webp",
-      "/assets/portfolio/infographics-upsc-polity-strategy-flowchart.webp",
-      "/assets/portfolio/infographics-physics-parabolic-trajectory.webp",
-      "/assets/portfolio/infographics-formula-cheat-sheet-matrix.webp",
-      "/assets/portfolio/infographics-electromagnetism-quick-notes.webp"
+      "/assets/portfolio/infographics-explainer-visual-narrative.webp"
     ]
   },
   {
@@ -143,9 +135,7 @@ export const PRIMARY_CATEGORIES = [
       "/assets/portfolio/pod-noon-04-tote-minimal.webp",
       "/assets/portfolio/pod-offline-tee-back-graphic.webp",
       "/assets/portfolio/pod-side-b-cassette-graphic.webp",
-      "/assets/portfolio/pod-streetwear-apparel-mockup.webp",
-      "/assets/portfolio/pod-kesign-heavyweight-tee.webp",
-      "/assets/portfolio/pod-urban-streetwear-tee.webp"
+      "/assets/portfolio/pod-streetwear-apparel-mockup.webp"
     ]
   },
   {
@@ -181,12 +171,7 @@ export const PRIMARY_CATEGORIES = [
     gallery: [
       "/assets/portfolio/social-creator-brand-suite.webp",
       "/assets/portfolio/social-youtube-thumbnail-tech.webp",
-      "/assets/portfolio/social-youtube-thumbnail-productivity.webp",
-      "/assets/portfolio/social-youtube-thumbnail-finance.webp",
-      "/assets/portfolio/social-active-recall-carousel.webp",
-      "/assets/portfolio/social-fintech-wealth-carousel.webp",
       "/assets/portfolio/social-campaign-carousel-editorial.webp",
-      "/assets/portfolio/social-modern-beauty-salon-post.webp",
       "/assets/portfolio/social-instagram-story-creative.webp",
       "/assets/portfolio/social-promotional-feed-post.webp"
     ]
@@ -320,7 +305,6 @@ export const PORTFOLIO_PROJECTS = [
     deliverables: ["Storefront Lookbook Spreads", "Fabric Spec Sheet Visuals", "Instagram Story Ad Frames"],
     gallery: [
       "/assets/portfolio/ecommerce-form-linen-apparel.webp",
-      "/assets/portfolio/ecommerce-fashion-lookbook-campaign.webp",
       "/assets/portfolio/ecommerce-d2c-product-showcase.webp"
     ]
   },
@@ -415,27 +399,6 @@ export const PORTFOLIO_PROJECTS = [
       "/assets/portfolio/infographics-explainer-visual-narrative.webp"
     ]
   },
-  {
-    id: "cardiac-anatomy-infographic",
-    title: "Biological Systems — Visual Information Design",
-    category: "Infographics & Information Design",
-    categoryId: "infographics-information",
-    clientType: "Scientific Visual",
-    subtitle: "High-precision vector scientific anatomy breakdown and information flow chart.",
-    description: "Clear anatomical illustration with labeled cross-sections and directional circulation schematics.",
-    image: "/assets/portfolio/infographics-neet-cardiac-anatomy.webp",
-    alt: "Scientific Biological Anatomy Information Design and Diagram",
-    tags: ["Scientific Infographic", "Anatomy Diagram", "Vector Schematic", "Clarity"],
-    stats: { deliverables: "Detailed Vector Chart", turnAround: "24 Hours", format: "Vector 4K" },
-    challenge: "Eliminating visual clutter while maintaining 100% technical and scientific accuracy.",
-    solution: "Utilized dual-tone color coding with clean leader lines and structured typography.",
-    deliverables: ["Anatomy Visual Breakdown", "Key Takeaway Infographic Card", "Presentation Slide Adaptation"],
-    gallery: [
-      "/assets/portfolio/infographics-neet-cardiac-anatomy.webp",
-      "/assets/portfolio/infographics-upsc-polity-strategy-flowchart.webp",
-      "/assets/portfolio/infographics-physics-parabolic-trajectory.webp"
-    ]
-  },
 
   // 07 — PRINT-ON-DEMAND
   {
@@ -477,8 +440,7 @@ export const PORTFOLIO_PROJECTS = [
     gallery: [
       "/assets/portfolio/pod-offline-tee-back-graphic.webp",
       "/assets/portfolio/pod-side-b-cassette-graphic.webp",
-      "/assets/portfolio/pod-streetwear-apparel-mockup.webp",
-      "/assets/portfolio/pod-kesign-heavyweight-tee.webp"
+      "/assets/portfolio/pod-streetwear-apparel-mockup.webp"
     ]
   },
 
@@ -546,12 +508,7 @@ export const PORTFOLIO_PROJECTS = [
     gallery: [
       "/assets/portfolio/social-creator-brand-suite.webp",
       "/assets/portfolio/social-youtube-thumbnail-tech.webp",
-      "/assets/portfolio/social-youtube-thumbnail-productivity.webp",
-      "/assets/portfolio/social-youtube-thumbnail-finance.webp",
-      "/assets/portfolio/social-active-recall-carousel.webp",
-      "/assets/portfolio/social-fintech-wealth-carousel.webp",
-      "/assets/portfolio/social-campaign-carousel-editorial.webp",
-      "/assets/portfolio/social-modern-beauty-salon-post.webp"
+      "/assets/portfolio/social-campaign-carousel-editorial.webp"
     ]
   }
 ];
