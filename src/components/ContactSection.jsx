@@ -56,7 +56,7 @@ export const ContactSection = () => {
         method: 'POST',
         mode: 'no-cors',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'text/plain;charset=utf-8',
         },
         body: JSON.stringify(payload),
       });
@@ -131,7 +131,7 @@ export const ContactSection = () => {
               <div className="text-xs font-mono text-[#666666] uppercase tracking-wider mb-4">CONNECT & FOLLOW</div>
               <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
                 <a
-                  href="https://threads.net"
+                  href="https://www.threads.net/@kesign_04?igshid=NTc4MTIwNjQ2YQ=="
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E5E5E5] text-[#666666] hover:text-[#111111] hover:border-[#FF5733]/50 transition-all interactive-hover flex items-center gap-2 text-xs font-mono shadow-sm"

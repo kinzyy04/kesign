@@ -69,7 +69,6 @@ export const PRIMARY_CATEGORIES = [
     tags: ["Publication Design", "Magazines", "Lookbooks", "E-Books", "Annual Reports", "Layout Systems"],
     gallery: [
       "/assets/portfolio/editorial-typography-lookbook-spread.webp",
-      "/assets/portfolio/editorial-architectural-magazine-spread.webp",
       "/assets/portfolio/editorial-minimalist-publication-cover.webp",
       "/assets/portfolio/editorial-modern-catalogue-layout.webp"
     ]
@@ -314,7 +313,6 @@ export const PORTFOLIO_PROJECTS = [
     deliverables: ["Full Magazine Layout Spreads", "Cover Art Direction", "Interactive Digital PDF Edition"],
     gallery: [
       "/assets/portfolio/editorial-typography-lookbook-spread.webp",
-      "/assets/portfolio/editorial-architectural-magazine-spread.webp",
       "/assets/portfolio/editorial-minimalist-publication-cover.webp",
       "/assets/portfolio/editorial-modern-catalogue-layout.webp"
     ]

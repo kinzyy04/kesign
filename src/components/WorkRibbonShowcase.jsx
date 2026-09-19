@@ -8,7 +8,7 @@ const ribbonItems = [
   { id: 'r-1', src: '/assets/portfolio/advertising-nova-rift-billboard.webp', label: 'Advertising Billboard', category: '01 Advertising', alt: 'NOVA The Rift Billboard' },
   { id: 'r-2', src: '/assets/portfolio/branding-aurelia-botanicals-identity.webp', label: 'Aurelia Botanicals', category: '02 Branding', alt: 'Aurelia Botanicals Brand Identity' },
   { id: 'r-3', src: '/assets/portfolio/ecommerce-auren-botanical-serum.webp', label: 'AUREN Serum Visual', category: '03 Products & E-Com', alt: 'AUREN Botanical Serum Product Visual' },
-  { id: 'r-4', src: '/assets/portfolio/editorial-architectural-magazine-spread.webp', label: 'STRUCT Magazine', category: '04 Editorials', alt: 'STRUCT Modern Architecture Editorial Magazine' },
+  { id: 'r-4', src: '/assets/portfolio/editorial-modern-catalogue-layout.webp', label: 'Storybook Layout', category: '04 Editorials', alt: 'Editorial Storybook Layout' },
   { id: 'r-5', src: '/assets/portfolio/events-creative-summit-poster.webp', label: 'Design Summit 2026', category: '05 Events', alt: 'Prism Design Summit Poster' },
   { id: 'r-6', src: '/assets/portfolio/infographics-data-visualization-matrix.webp', label: 'Process Matrix', category: '06 Infographics', alt: 'Nexus Process Architecture Infographic' },
   { id: 'r-7', src: '/assets/portfolio/pod-club-1994-tote-front.webp', label: 'CLUB 1994 Tote', category: '07 Print-on-Demand', alt: 'CLUB 1994 Streetwear Canvas Tote' },
