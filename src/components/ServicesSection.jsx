@@ -8,46 +8,46 @@ export const ServicesSection = () => {
   const [activeModalCategory, setActiveModalCategory] = useState(null);
 
   return (
-    <section id="categories" className="py-24 sm:py-32 bg-[#F6F6F6] relative overflow-hidden select-none">
+    <section id="categories" className="py-16 sm:py-24 md:py-32 bg-[#F6F6F6] relative overflow-hidden select-none">
       
       {/* Background Subtle Gradient Blobs */}
       <div className="absolute top-1/4 right-0 w-[700px] h-[550px] bg-gradient-to-bl from-[#FF5733]/15 via-[#FF7755]/10 to-transparent rounded-full blur-[140px] pointer-events-none z-0" />
       <div className="absolute bottom-10 left-0 w-[600px] h-[450px] bg-gradient-to-tr from-[#FF5733]/12 via-[#FF8C66]/8 to-transparent rounded-full blur-[130px] pointer-events-none z-0" />
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 md:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="flex items-center gap-3 mb-4">
-          <span className="h-[1px] w-12 bg-gradient-to-r from-[#FF5733] to-[#FF8C66]" />
-          <span className="text-xs uppercase font-mono tracking-widest text-[#666666]">02 / Core Disciplines</span>
+        <div className="flex items-center gap-3 mb-3 sm:mb-4">
+          <span className="h-[1px] w-8 sm:w-12 bg-gradient-to-r from-[#FF5733] to-[#FF8C66]" />
+          <span className="text-[10px] sm:text-xs uppercase font-mono tracking-widest text-[#666666]">02 / Core Disciplines</span>
         </div>
 
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-16 gap-4 sm:gap-6">
           <div>
             <h2 className="text-3xl sm:text-5xl md:text-7xl font-extrabold text-[#111111] tracking-tight">
               09 Design Worlds<span className="font-serif-italic text-[#FF5733]">.</span>
             </h2>
-            <p className="mt-4 text-base text-[#666666] max-w-2xl font-normal">
+            <p className="mt-2 sm:mt-4 text-xs sm:text-base text-[#666666] max-w-2xl font-normal">
               From high-converting e-commerce and editorial publications to viral social suites and architectural identity systems. Click <strong className="text-[#111111]">[ View Work ]</strong> to explore real client assets inside any category.
             </p>
           </div>
 
-          <div className="text-xs font-mono text-[#666666] flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-[#E5E5E5] shadow-sm shrink-0">
-            <Sparkles size={14} className="text-[#FF5733]" />
+          <div className="text-[10px] sm:text-xs font-mono text-[#666666] flex items-center gap-2 bg-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-[#E5E5E5] shadow-sm shrink-0 w-fit">
+            <Sparkles size={13} className="text-[#FF5733]" />
             <span>9 PRIMARY CATEGORIES</span>
           </div>
         </div>
 
-        {/* 3-Column Card Grid for the 9 Categories */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* 2 Columns on Phone & Tablet, 3 Columns on Large Screens */}
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 md:gap-8">
           {PRIMARY_CATEGORIES.map((cat, idx) => (
             <motion.div
               key={cat.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.05 }}
-              className="group rounded-3xl overflow-hidden border border-[#E5E5E5] bg-white shadow-sm hover:shadow-2xl hover:border-[#FF5733]/40 transition-all duration-500 flex flex-col cursor-pointer"
+              transition={{ duration: 0.4, delay: idx * 0.04 }}
+              className="group rounded-2xl sm:rounded-3xl overflow-hidden border border-[#E5E5E5] bg-white shadow-sm hover:shadow-2xl hover:border-[#FF5733]/40 transition-all duration-500 flex flex-col cursor-pointer"
               onClick={() => setActiveModalCategory(cat)}
             >
               {/* Image Preview Container */}
@@ -61,58 +61,59 @@ export const ServicesSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
 
                 {/* Number badge top-left */}
-                <div className="absolute top-4 left-4 z-10">
-                  <span className="px-3 py-1 rounded-full text-xs font-mono font-bold uppercase bg-black/60 backdrop-blur-md text-white border border-white/20">
+                <div className="absolute top-2 left-2 sm:top-4 sm:left-4 z-10">
+                  <span className="px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[9px] sm:text-xs font-mono font-bold uppercase bg-black/60 backdrop-blur-md text-white border border-white/20">
                     {cat.number}
                   </span>
                 </div>
 
                 {/* Stats badge top-right */}
-                <div className="absolute top-4 right-4 z-10">
-                  <span className="px-3 py-1 rounded-full text-[10px] font-mono uppercase backdrop-blur-md text-white border border-white/20 bg-black/60">
+                <div className="absolute top-2 right-2 sm:top-4 sm:right-4 z-10">
+                  <span className="px-1.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[7.5px] sm:text-[10px] font-mono uppercase backdrop-blur-md text-white border border-white/20 bg-black/60">
                     {cat.gallery.length} ASSETS
                   </span>
                 </div>
 
                 {/* Hover overlay with Eye icon */}
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
-                  <div className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-[#111111] font-bold text-xs font-mono uppercase tracking-wider shadow-lg">
-                    <Eye size={14} className="text-[#FF5733]" />
-                    <span>View Category Work</span>
+                  <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full bg-white text-[#111111] font-bold text-[10px] sm:text-xs font-mono uppercase tracking-wider shadow-lg">
+                    <Eye size={13} className="text-[#FF5733]" />
+                    <span className="hidden sm:inline">View Category Work</span>
+                    <span className="sm:hidden">View Work</span>
                   </div>
                 </div>
               </div>
 
               {/* Card Body */}
-              <div className="flex flex-col flex-1 p-6 sm:p-7">
+              <div className="flex flex-col flex-1 p-3 sm:p-6 md:p-7">
                 {/* Tag */}
-                <span className="text-[10px] font-mono uppercase tracking-widest mb-2 text-[#888888]">
+                <span className="text-[8px] sm:text-[10px] font-mono uppercase tracking-wider sm:tracking-widest mb-1 sm:mb-2 text-[#888888] truncate">
                   {cat.tag}
                 </span>
 
                 {/* Title */}
-                <h3 className="text-xl sm:text-2xl font-extrabold text-[#111111] tracking-tight leading-tight mb-3 group-hover:text-[#FF5733] transition-colors duration-300">
+                <h3 className="text-xs sm:text-xl md:text-2xl font-extrabold text-[#111111] tracking-tight leading-snug sm:leading-tight mb-1 sm:mb-3 group-hover:text-[#FF5733] transition-colors duration-300 line-clamp-2 sm:line-clamp-none">
                   {cat.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-xs sm:text-sm text-[#666666] leading-relaxed flex-1 mb-6">
+                <p className="text-[10px] sm:text-xs md:text-sm text-[#666666] leading-relaxed flex-1 mb-2.5 sm:mb-6 line-clamp-2 sm:line-clamp-none">
                   {cat.shortDesc}
                 </p>
 
                 {/* Action Bar */}
-                <div className="pt-4 border-t border-[#F0F0F0] flex items-center justify-between">
+                <div className="pt-2.5 sm:pt-4 border-t border-[#F0F0F0] flex items-center justify-between gap-1">
                   <button
                     onClick={(e) => { e.stopPropagation(); setActiveModalCategory(cat); }}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#111111] text-white font-bold text-xs font-mono uppercase tracking-wider hover:bg-[#FF5733] transition-all duration-300"
+                    className="inline-flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-1.5 sm:py-2 rounded-full bg-[#111111] text-white font-bold text-[9px] sm:text-xs font-mono uppercase tracking-wider hover:bg-[#FF5733] transition-all duration-300"
                   >
-                    <Eye size={13} />
+                    <Eye size={11} className="sm:w-3.5 sm:h-3.5" />
                     <span>View Work</span>
                   </button>
 
-                  <div className="text-[11px] font-mono text-[#888888] flex items-center gap-1 group-hover:text-[#FF5733] transition-colors">
-                    <span>EXPLORE</span>
-                    <ArrowUpRight size={14} />
+                  <div className="text-[9px] sm:text-[11px] font-mono text-[#888888] flex items-center gap-0.5 sm:gap-1 group-hover:text-[#FF5733] transition-colors">
+                    <span className="hidden sm:inline">EXPLORE</span>
+                    <ArrowUpRight size={12} className="sm:w-3.5 sm:h-3.5" />
                   </div>
                 </div>
               </div>

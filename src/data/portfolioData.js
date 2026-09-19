@@ -36,8 +36,27 @@ export const PRIMARY_CATEGORIES = [
     ]
   },
   {
-    id: "products-ecommerce",
+    id: "restaurant-cafe",
     number: "03",
+    title: "Restaurant & Café",
+    tag: "MENUS · BOARDS · HOSPITALITY",
+    shortDesc: "Appetizing menu systems, table collateral, promotional boards, and hospitality branding.",
+    description: "Visual systems for dining spaces, specialty roasters, and culinary concepts. We design editorial food & beverage menus, QR menus, nutrition boards, table cards, and social promos that whet the appetite.",
+    bannerImage: "/assets/portfolio/restaurant-nimbu-co-nutrition-board.webp",
+    alt: "Nimbu & Co. Kokum Lime Cooler restaurant beverage packaging and nutrition board by Kesign",
+    stats: "CULINARY SYSTEMS",
+    tags: ["Editorial Menus", "Café Systems", "Menu Boards", "Table Cards", "Food Promos", "Hospitality"],
+    gallery: [
+      "/assets/portfolio/restaurant-nimbu-co-nutrition-board.webp",
+      "/assets/portfolio/restaurant-gulmohar-house-menu.webp",
+      "/assets/portfolio/restaurant-mellow-milk-cafe-menu.webp",
+      "/assets/portfolio/restaurant-cafe-promo-poster.webp",
+      "/assets/portfolio/restaurant-beverage-social-creative.webp"
+    ]
+  },
+  {
+    id: "products-ecommerce",
+    number: "04",
     title: "Products & E-Commerce",
     tag: "PACKAGING · D2C · CONVERSION",
     shortDesc: "High-impact product visuals, D2C campaigns, and e-commerce graphics that elevate products and sell.",
@@ -58,7 +77,7 @@ export const PRIMARY_CATEGORIES = [
   },
   {
     id: "editorials-publishing",
-    number: "04",
+    number: "05",
     title: "Editorials & Publishing",
     tag: "MAGAZINES · E-BOOKS · REPORTS",
     shortDesc: "Sophisticated publications, magazines, lookbooks, digital guides, and editorial layouts.",
@@ -75,7 +94,7 @@ export const PRIMARY_CATEGORIES = [
   },
   {
     id: "events-experiences",
-    number: "05",
+    number: "06",
     title: "Events & Experiences",
     tag: "SUMMITS · STANDEES · SPACES",
     shortDesc: "Complete visual experiences for summits, launches, exhibitions, and brand activations.",
@@ -92,7 +111,7 @@ export const PRIMARY_CATEGORIES = [
   },
   {
     id: "infographics-information",
-    number: "06",
+    number: "07",
     title: "Infographics & Information Design",
     tag: "DATA · PROCESSES · CLARITY",
     shortDesc: "Turning complex information, data, and processes into clear, compelling visual stories.",
@@ -109,7 +128,7 @@ export const PRIMARY_CATEGORIES = [
   },
   {
     id: "print-on-demand",
-    number: "07",
+    number: "08",
     title: "Print-on-Demand",
     tag: "STREETWEAR · MERCH · TOTES",
     shortDesc: "Modern apparel graphics, streetwear tees, canvas totes, and physical merchandise design.",
@@ -124,25 +143,6 @@ export const PRIMARY_CATEGORIES = [
       "/assets/portfolio/pod-offline-tee-back-graphic.webp",
       "/assets/portfolio/pod-side-b-cassette-graphic.webp",
       "/assets/portfolio/pod-streetwear-apparel-mockup.webp"
-    ]
-  },
-  {
-    id: "restaurant-cafe",
-    number: "08",
-    title: "Restaurant & Café",
-    tag: "MENUS · BOARDS · HOSPITALITY",
-    shortDesc: "Appetizing menu systems, table collateral, promotional boards, and hospitality branding.",
-    description: "Visual systems for dining spaces, specialty roasters, and culinary concepts. We design editorial food & beverage menus, QR menus, nutrition boards, table cards, and social promos that whet the appetite.",
-    bannerImage: "/assets/portfolio/restaurant-nimbu-co-nutrition-board.webp",
-    alt: "Nimbu & Co. Kokum Lime Cooler restaurant beverage packaging and nutrition board by Kesign",
-    stats: "CULINARY SYSTEMS",
-    tags: ["Editorial Menus", "Café Systems", "Menu Boards", "Table Cards", "Food Promos", "Hospitality"],
-    gallery: [
-      "/assets/portfolio/restaurant-nimbu-co-nutrition-board.webp",
-      "/assets/portfolio/restaurant-gulmohar-house-menu.webp",
-      "/assets/portfolio/restaurant-mellow-milk-cafe-menu.webp",
-      "/assets/portfolio/restaurant-cafe-promo-poster.webp",
-      "/assets/portfolio/restaurant-beverage-social-creative.webp"
     ]
   },
   {
