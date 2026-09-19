@@ -15,7 +15,7 @@ const ribbonItems = [
   { id: 'r-8', src: '/assets/portfolio/restaurant-gulmohar-house-menu.webp', label: 'Gulmohar House Menu', category: '08 Restaurant & Café', alt: 'Gulmohar House Dining Menu' },
   { id: 'r-9', src: '/assets/portfolio/social-creator-brand-suite.webp', label: 'Creator Brand Suite', category: '09 Social Media', alt: 'Nexus Media Creator Brand Suite' },
   { id: 'r-10', src: '/assets/portfolio/advertising-clay-co-standee.webp', label: 'Clay & Co Standee', category: '01 Advertising', alt: 'Clay & Co Editorial Standee' },
-  { id: 'r-11', src: '/assets/portfolio/branding-olea-organics-system.webp', label: 'Olea Organics', category: '02 Branding', alt: 'Olea Organics Brand System' },
+  { id: 'r-11', src: '/assets/portfolio/branding-merchandise-matte-bottle.webp', label: 'Brand Merchandise', category: '02 Branding', alt: 'Matte Bottle Brand Merchandise' },
   { id: 'r-12', src: '/assets/portfolio/ecommerce-form-linen-apparel.webp', label: 'FORM / 01 Linen', category: '03 Products & E-Com', alt: 'FORM 01 Linen Lookbook' },
   { id: 'r-13', src: '/assets/portfolio/editorial-minimalist-publication-cover.webp', label: 'Publication Cover', category: '04 Editorials', alt: 'Minimalist Publication Cover Layout' },
   { id: 'r-14', src: '/assets/portfolio/pod-offline-tee-back-graphic.webp', label: 'OFFLINE Back Graphic', category: '07 Print-on-Demand', alt: 'OFFLINE Cyber Minimalist T-Shirt Graphic' },

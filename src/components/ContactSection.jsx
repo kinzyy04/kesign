@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Copy, Check, ArrowUpRight, Linkedin, Instagram, MessageCircle, Send, Loader2, Phone, Sparkles } from 'lucide-react';
+import { Mail, Copy, Check, ArrowUpRight, MessageCircle, Loader2 } from 'lucide-react';
 
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzPaOdQQZtkj43fjY6_hnw_Bfk4B8BLehdGt0BGnwBxINYbjOEmHFOc1dxG9NRjiVx4/exec';
 
@@ -126,53 +126,10 @@ export const ContactSection = () => {
               </button>
             </div>
 
-            {/* Quick WhatsApp Link */}
-            <div className="p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E5E5E5] flex items-center justify-between shadow-sm">
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-[#25D366]/10 text-[#25D366] flex items-center justify-center">
-                  <Send size={18} />
-                </div>
-                <div>
-                  <div className="text-[10px] font-mono text-[#888888] uppercase">WHATSAPP CHAT</div>
-                  <div className="text-xs font-bold text-[#111111]">Instant Project Discovery</div>
-                </div>
-              </div>
-
-              <a
-                href="https://wa.me/919876543210"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-full bg-[#111111] text-white text-[11px] font-mono uppercase font-semibold hover:bg-[#25D366] transition-colors flex items-center gap-1.5"
-              >
-                <span>Chat Now</span>
-                <ArrowUpRight size={13} />
-              </a>
-            </div>
-
             {/* Social Channels */}
             <div>
               <div className="text-xs font-mono text-[#666666] uppercase tracking-wider mb-4">CONNECT & FOLLOW</div>
               <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
-                <a
-                  href="https://linkedin.com/in/krinjal-agrawal"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E5E5E5] text-[#666666] hover:text-[#111111] hover:border-[#FF5733]/50 transition-all interactive-hover flex items-center gap-2 text-xs font-mono shadow-sm"
-                >
-                  <Linkedin size={16} />
-                  <span>LinkedIn</span>
-                </a>
-
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E5E5E5] text-[#666666] hover:text-[#111111] hover:border-[#FF5733]/50 transition-all interactive-hover flex items-center gap-2 text-xs font-mono shadow-sm"
-                >
-                  <Instagram size={16} />
-                  <span>Instagram</span>
-                </a>
-
                 <a
                   href="https://threads.net"
                   target="_blank"

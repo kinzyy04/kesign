@@ -5,6 +5,7 @@ import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { WorkRibbonShowcase } from './components/WorkRibbonShowcase';
 import { ServicesSection } from './components/ServicesSection';
+import { TestimonialsMarquee } from './components/TestimonialsMarquee';
 import { AboutSection } from './components/AboutSection';
 import { TeamSection } from './components/TeamSection';
 import { AIPhilosophySection } from './components/AIPhilosophySection';
@@ -32,6 +33,7 @@ export function App() {
           <HeroSection />
           <WorkRibbonShowcase onSelectProject={(project) => setModalProject(project)} />
           <ServicesSection />
+          <TestimonialsMarquee />
           <AboutSection />
           <TeamSection />
           <AIPhilosophySection />

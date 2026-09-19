@@ -14,9 +14,7 @@ export const PRIMARY_CATEGORIES = [
       "/assets/portfolio/advertising-nova-rift-billboard.webp",
       "/assets/portfolio/advertising-clay-co-standee.webp",
       "/assets/portfolio/advertising-campaign-poster-minimal.webp",
-      "/assets/portfolio/advertising-promotional-banner-modern.webp",
-      "/assets/portfolio/advertising-visual-composition-creative.webp",
-      "/assets/portfolio/advertising-digital-campaign-graphics.webp"
+      "/assets/portfolio/advertising-promotional-banner-modern.webp"
     ]
   },
   {
@@ -33,10 +31,7 @@ export const PRIMARY_CATEGORIES = [
     gallery: [
       "/assets/portfolio/branding-aurelia-botanicals-identity.webp",
       "/assets/portfolio/branding-business-card-stationery.webp",
-      "/assets/portfolio/branding-olea-organics-system.webp",
       "/assets/portfolio/branding-swirl-geometric-emblem.webp",
-      "/assets/portfolio/branding-lettermark-a-emblem.webp",
-      "/assets/portfolio/branding-stationery-merch-kit.webp",
       "/assets/portfolio/branding-merchandise-matte-bottle.webp"
     ]
   },
@@ -76,12 +71,7 @@ export const PRIMARY_CATEGORIES = [
       "/assets/portfolio/editorial-architectural-magazine-spread.webp",
       "/assets/portfolio/editorial-minimalist-publication-cover.webp",
       "/assets/portfolio/editorial-typography-lookbook-spread.webp",
-      "/assets/portfolio/editorial-modern-catalogue-layout.webp",
-      "/assets/portfolio/editorial-aethel-venture-publication.webp",
-      "/assets/portfolio/editorial-academic-planner-system.webp",
-      "/assets/portfolio/editorial-python-computational-handbook.webp",
-      "/assets/portfolio/editorial-literature-study-guide.webp",
-      "/assets/portfolio/editorial-poetry-themes-presentation.webp"
+      "/assets/portfolio/editorial-modern-catalogue-layout.webp"
     ]
   },
   {
@@ -240,8 +230,7 @@ export const PORTFOLIO_PROJECTS = [
     deliverables: ["Primary & Secondary Logo Marks", "Color & Typography Tokens", "Brand Collateral System"],
     gallery: [
       "/assets/portfolio/branding-aurelia-botanicals-identity.webp",
-      "/assets/portfolio/branding-business-card-stationery.webp",
-      "/assets/portfolio/branding-stationery-merch-kit.webp"
+      "/assets/portfolio/branding-business-card-stationery.webp"
     ]
   },
   {
@@ -252,7 +241,7 @@ export const PORTFOLIO_PROJECTS = [
     clientType: "Brand Architecture",
     subtitle: "Minimalist brand identity and stationery suite for an organic cold-press wellness company.",
     description: "Clean modern lettermark with earthy olive tones, tactile kraft textures, and sustainable packaging guidelines.",
-    image: "/assets/portfolio/branding-olea-organics-system.webp",
+    image: "/assets/portfolio/branding-merchandise-matte-bottle.webp",
     alt: "Olea Organics Sustainable Visual Identity and Brand System",
     tags: ["Brand Identity", "Stationery", "Eco Packaging", "Wordmark"],
     stats: { deliverables: "Complete Brand Suite", turnAround: "48 Hours", format: "Vector & Print Formats" },
@@ -260,7 +249,6 @@ export const PORTFOLIO_PROJECTS = [
     solution: "Built a warm monochrome palette with refined modern typography and precision stationery mockups.",
     deliverables: ["Wordmark & Icon System", "Business Stationery Layouts", "Packaging Guidelines"],
     gallery: [
-      "/assets/portfolio/branding-olea-organics-system.webp",
       "/assets/portfolio/branding-merchandise-matte-bottle.webp",
       "/assets/portfolio/branding-swirl-geometric-emblem.webp"
     ]
@@ -330,27 +318,6 @@ export const PORTFOLIO_PROJECTS = [
       "/assets/portfolio/editorial-minimalist-publication-cover.webp",
       "/assets/portfolio/editorial-typography-lookbook-spread.webp",
       "/assets/portfolio/editorial-modern-catalogue-layout.webp"
-    ]
-  },
-  {
-    id: "aethel-venture-publication",
-    title: "Aethel Venture Series B Publication Deck",
-    category: "Editorials & Publishing",
-    categoryId: "editorials-publishing",
-    clientType: "Executive Publication",
-    subtitle: "A luxury editorial investment publication designed for a $25M growth round.",
-    description: "Obsidian glassmorphism, bold typographic hierarchy, and custom financial editorial charts.",
-    image: "/assets/portfolio/editorial-aethel-venture-publication.webp",
-    alt: "Aethel Venture Series B Investment Publication and Keynote",
-    tags: ["Executive Deck", "Publication", "Investor Keynote", "Editorial"],
-    stats: { deliverables: "22 Master Pages", turnAround: "48 Hours", format: "Figma, Keynote & PDF" },
-    challenge: "Traditional investment decks look sterile and cluttered. Aethel needed a piece that felt like a luxury monograph.",
-    solution: "Engineered dark charcoal editorial pages with crisp mint data indicators and minimal typography.",
-    deliverables: ["22-Page Editorial Publication", "Interactive Master Template", "Executive Summary One-Pager"],
-    gallery: [
-      "/assets/portfolio/editorial-aethel-venture-publication.webp",
-      "/assets/portfolio/editorial-academic-planner-system.webp",
-      "/assets/portfolio/editorial-python-computational-handbook.webp"
     ]
   },
 

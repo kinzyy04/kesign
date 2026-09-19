@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowUp } from 'lucide-react';
-import { PRIMARY_CATEGORIES } from '../data/portfolioData';
 
 export const Footer = () => {
   const [time, setTime] = useState('');
@@ -22,14 +21,14 @@ export const Footer = () => {
   return (
     <footer className="bg-[#F6F6F6] border-t border-[#E5E5E5] pt-16 pb-12 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-16 border-b border-[#E5E5E5]">
+        <div className="flex flex-col md:flex-row justify-between gap-10 pb-16 border-b border-[#E5E5E5]">
           
           {/* Brand Col */}
-          <div className="md:col-span-5 space-y-4">
+          <div className="space-y-4 max-w-sm">
             <a href="#" className="inline-block text-3xl sm:text-4xl font-extrabold tracking-tighter text-[#111111]">
               kesign<span className="font-serif-italic text-[#FF5733]">.</span>
             </a>
-            <p className="text-xs sm:text-sm text-[#666666] max-w-sm leading-relaxed font-normal">
+            <p className="text-xs sm:text-sm text-[#666666] leading-relaxed font-normal">
               A modern design studio creating high-quality visual work for brands, businesses, creators, products, and experiences. Founded by four IIT Delhi students.
             </p>
             <div className="flex items-center gap-3 text-xs font-mono text-[#666666] pt-2">
@@ -38,26 +37,8 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* 9 Categories List Col */}
-          <div className="md:col-span-4 space-y-3">
-            <div className="text-xs font-mono text-[#111111] font-bold uppercase tracking-wider mb-4">
-              09 DESIGN WORLDS
-            </div>
-            <div className="grid grid-cols-1 gap-1.5 text-xs font-mono text-[#666666]">
-              {PRIMARY_CATEGORIES.map((cat) => (
-                <a
-                  key={cat.id}
-                  href="#categories"
-                  className="hover:text-[#FF5733] transition-colors"
-                >
-                  {cat.number} — {cat.title}
-                </a>
-              ))}
-            </div>
-          </div>
-
           {/* Founders Col */}
-          <div className="md:col-span-3 space-y-3">
+          <div className="space-y-3">
             <div className="text-xs font-mono text-[#111111] font-bold uppercase tracking-wider mb-4">
               STUDIO FOUNDERS
             </div>
