@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://kesign.me/sitemap.xml

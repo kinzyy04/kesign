@@ -3,16 +3,15 @@ import { Preloader } from './components/Preloader';
 import { CustomCursor } from './components/CustomCursor';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
-import { TeamSection } from './components/TeamSection';
 import { WorkRibbonShowcase } from './components/WorkRibbonShowcase';
 import { ServicesSection } from './components/ServicesSection';
-import { ProjectModal } from './components/ProjectModal';
+import { AboutSection } from './components/AboutSection';
+import { TeamSection } from './components/TeamSection';
 import { AIPhilosophySection } from './components/AIPhilosophySection';
 import { ComparisonSection } from './components/ComparisonSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
-
-import { TestimonialsMarquee } from './components/TestimonialsMarquee';
+import { ProjectModal } from './components/ProjectModal';
 
 export function App() {
   const [loading, setLoading] = useState(true);
@@ -33,12 +32,11 @@ export function App() {
           <HeroSection />
           <WorkRibbonShowcase onSelectProject={(project) => setModalProject(project)} />
           <ServicesSection />
-          <TestimonialsMarquee />
-
-          <ContactSection />
-          <ComparisonSection />
+          <AboutSection />
           <TeamSection />
           <AIPhilosophySection />
+          <ComparisonSection />
+          <ContactSection />
           <Footer />
 
           {/* Project Modal Triggered from Ribbon Showcase */}

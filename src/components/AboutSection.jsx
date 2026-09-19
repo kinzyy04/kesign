@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Cpu, Eye, Sparkles, Palette } from 'lucide-react';
+import { Cpu, Eye, Sparkles, Palette, Layers, Compass } from 'lucide-react';
 
 export const AboutSection = () => {
   return (
@@ -8,69 +8,68 @@ export const AboutSection = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         {/* Section Tag */}
         <div className="flex items-center gap-3 mb-6">
-          <span className="h-[1px] w-12 bg-[#111111]" />
-          <span className="text-xs uppercase font-mono tracking-widest text-[#666666]">01 / Who We Are</span>
+          <span className="h-[1px] w-12 bg-[#FF5733]" />
+          <span className="text-xs uppercase font-mono tracking-widest text-[#666666]">03 / About Kesign</span>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Main Title Left */}
           <div className="lg:col-span-5">
             <h2 className="text-4xl sm:text-6xl font-extrabold text-[#111111] tracking-tight leading-tight">
-              Engineering meets <br />
-              <span className="font-serif-italic font-normal text-[#444444]">design excellence</span>.
+              Engineering rigor meets <br />
+              <span className="font-serif-italic font-normal text-[#FF5733]">visual distinction</span>.
             </h2>
             <p className="mt-6 text-xs font-mono text-[#666666] uppercase tracking-wider">
-              "Kesign" — Design with us.
+              "Kesign" — IIT Delhi Student-Founded Design Studio.
             </p>
           </div>
 
           {/* Detailed Content Right */}
-          <div className="lg:col-span-7 space-y-8 text-base sm:text-lg text-[#666666] font-normal leading-relaxed">
+          <div className="lg:col-span-7 space-y-8 text-base sm:text-lg text-[#555555] font-normal leading-relaxed">
             <p>
-              We are four engineering students from <span className="text-[#111111] font-semibold">IIT Delhi</span> building an AI-assisted creative studio that delivers world-class design work for startups, brands, and creators.
+              <strong className="text-[#111111]">Kesign</strong> is a modern design studio founded by four students from <strong className="text-[#111111]">IIT Delhi</strong>: Krinjal Agrawal, Kshitija Karmore, Krishna Thakur, and Krishan Sawariya.
             </p>
 
             <p>
-              We combine engineering rigor with high-end aesthetic taste to deliver premium design solutions — from pitch decks and brand systems to social media assets and course launch suites.
+              We craft high-quality visual work across 9 specialized design worlds — from high-impact advertising campaigns, branding systems, and e-commerce packaging to sophisticated editorial layouts, event experiences, and high-CTR social media creatives.
             </p>
 
             <p className="text-[#111111] font-medium">
-              The "K" in kesign represents our four founders — Krinjal, Kshitija, Krishna, and Krishan.
-              Together, we craft designs that push boundaries and elevate brands.
+              We leverage modern AI-assisted pipelines to eliminate repetitive lag and explore more creative variations, while every final deliverable is shaped, judged, and perfected by human hands.
             </p>
 
             {/* Core Pillars */}
-            <div className="pt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="p-6 rounded-2xl bg-white border border-[#E5E5E5] shadow-sm">
-                <div className="w-9 h-9 rounded-xl bg-[#F6F6F6] text-[#111111] flex items-center justify-center mb-4">
-                  <Cpu size={18} />
+            <div className="pt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="p-5 rounded-2xl bg-white border border-[#E5E5E5] shadow-sm">
+                <div className="w-9 h-9 rounded-xl bg-[#F6F6F6] text-[#FF5733] flex items-center justify-center mb-3">
+                  <Compass size={18} />
                 </div>
-                <h3 className="text-sm font-bold text-[#111111]">Speed</h3>
-                <p className="text-xs text-[#666666] mt-1 leading-relaxed">24-48h turnaround powered by AI generation engines.</p>
+                <h3 className="text-sm font-bold text-[#111111]">Human Direction</h3>
+                <p className="text-xs text-[#666666] mt-1 leading-relaxed">Design thinking, taste, and strategic intent guide every choice.</p>
               </div>
 
-              <div className="p-6 rounded-2xl bg-white border border-[#E5E5E5] shadow-sm">
-                <div className="w-9 h-9 rounded-xl bg-[#F6F6F6] text-[#111111] flex items-center justify-center mb-4">
+              <div className="p-5 rounded-2xl bg-white border border-[#E5E5E5] shadow-sm">
+                <div className="w-9 h-9 rounded-xl bg-[#F6F6F6] text-[#FF5733] flex items-center justify-center mb-3">
                   <Eye size={18} />
                 </div>
-                <h3 className="text-sm font-bold text-[#111111]">Quality</h3>
-                <p className="text-xs text-[#666666] mt-1 leading-relaxed">Minimal editorial aesthetic inspired by Kyne Jang &amp; Framer Gallery.</p>
+                <h3 className="text-sm font-bold text-[#111111]">Visual Precision</h3>
+                <p className="text-xs text-[#666666] mt-1 leading-relaxed">Clean typography, strict grid hierarchy, and restrained elegance.</p>
               </div>
 
-              <div className="p-6 rounded-2xl bg-white border border-[#E5E5E5] shadow-sm">
-                <div className="w-9 h-9 rounded-xl bg-[#F6F6F6] text-[#111111] flex items-center justify-center mb-4">
-                  <Sparkles size={18} />
+              <div className="p-5 rounded-2xl bg-white border border-[#E5E5E5] shadow-sm">
+                <div className="w-9 h-9 rounded-xl bg-[#F6F6F6] text-[#FF5733] flex items-center justify-center mb-3">
+                  <Cpu size={18} />
                 </div>
-                <h3 className="text-sm font-bold text-[#111111]">Thoughtful</h3>
-                <p className="text-xs text-[#666666] mt-1 leading-relaxed">Every element is reviewed and finalized by human hands.</p>
+                <h3 className="text-sm font-bold text-[#111111]">24–48h Velocity</h3>
+                <p className="text-xs text-[#666666] mt-1 leading-relaxed">Automated scaffolding compresses production from weeks to hours.</p>
               </div>
 
-              <div className="p-6 rounded-2xl bg-white border border-[#FF5733]/30 shadow-sm ring-1 ring-[#FF5733]/10">
-                <div className="w-9 h-9 rounded-xl bg-[#FF5733]/10 text-[#FF5733] flex items-center justify-center mb-4">
-                  <Palette size={18} />
+              <div className="p-5 rounded-2xl bg-white border border-[#E5E5E5] shadow-sm">
+                <div className="w-9 h-9 rounded-xl bg-[#F6F6F6] text-[#FF5733] flex items-center justify-center mb-3">
+                  <Layers size={18} />
                 </div>
-                <h3 className="text-sm font-bold text-[#111111]">Creative Vision</h3>
-                <p className="text-xs text-[#666666] mt-1 leading-relaxed">Bold concepts and elevated aesthetics for brands that want to stand out.</p>
+                <h3 className="text-sm font-bold text-[#111111]">09 Disciplines</h3>
+                <p className="text-xs text-[#666666] mt-1 leading-relaxed">Unified visual design stack across print, physical merch, and digital.</p>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Sparkles } from 'lucide-react';
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -15,10 +15,10 @@ export const Navbar = () => {
   }, []);
 
   const navLinks = [
+    { name: "[WORK]", href: "#work" },
+    { name: "[09 CATEGORIES]", href: "#categories" },
     { name: "[FOUNDERS]", href: "#team" },
-    { name: "[WHAT WE BUILD]", href: "#services" },
-
-    { name: "[LET'S TALK]", href: "#contact" },
+    { name: "[PHILOSOPHY]", href: "#philosophy" },
   ];
 
   return (
@@ -32,15 +32,18 @@ export const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between">
         {/* Brand Logo */}
-        <a href="#" className="flex items-center gap-2 group interactive-hover">
-          <span className="text-3xl font-normal font-serif-italic tracking-tight text-[#111111] group-hover:opacity-80 transition-opacity">
+        <a href="#" className="flex items-center gap-2 group interactive-hover" aria-label="Kesign Studio Homepage">
+          <span className="text-2xl sm:text-3xl font-normal font-serif-italic tracking-tight text-[#111111] group-hover:opacity-80 transition-opacity">
             kesign
           </span>
           <span className="w-1.5 h-1.5 rounded-full bg-[#FF5733]" />
+          <span className="hidden sm:inline-block text-[10px] font-mono text-[#666666] tracking-wider ml-2 px-2 py-0.5 rounded-full border border-[#E5E5E5] bg-white">
+            IIT DELHI STUDIO
+          </span>
         </a>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-6" aria-label="Main Navigation">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -67,6 +70,7 @@ export const Navbar = () => {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2.5 rounded-full bg-white border border-[#E5E5E5] text-[#111111] lg:hidden interactive-hover"
+            aria-label="Toggle Mobile Menu"
           >
             {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>

@@ -1,139 +1,137 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, Eye } from 'lucide-react';
+import { PORTFOLIO_PROJECTS } from '../data/portfolioData';
 
-// All gallery images from the 9 service verticals including real uploaded work samples
-const allWorkImages = [
-  // Real Uploaded Work - Teaching Decks & Notes
-  { id: 'w-1', src: '/assets/work_deck_1.jpg', label: 'NEET Biology Deck' },
-  { id: 'w-2', src: '/assets/work_deck_2.jpg', label: 'Poem Analysis Slide' },
-  { id: 'w-3', src: '/assets/work_deck_3.jpg', label: 'Physics Trajectory Deck' },
-  // Real Uploaded Work - Teaching Assets
-  { id: 'w-5', src: '/assets/work_teaching_assests_11.jpg', label: 'Physics Revision Notes' },
-  { id: 'w-6', src: '/assets/work_teaching_assests_12.jpg', label: 'Python Recursion Sheet' },
-  { id: 'w-7', src: '/assets/work_teaching_assests_13.jpg', label: 'Poem Themes Study Note' },
-  // Real Uploaded Work - Social Media Posts
-  { id: 'w-8', src: '/assets/work_post_6.jpg', label: 'Active Recall Carousel' },
-  { id: 'w-9', src: '/assets/work_post_7.jpg', label: 'Promotional Post' },
-  // Real Uploaded Work - Digital Assets & Strategy
-  { id: 'w-10', src: '/assets/work_digital_assests_4.jpg', label: 'Academic Planner Guide' },
-  { id: 'w-11', src: '/assets/work_digital_assests_5.jpg', label: 'UPSC Polity Strategy' },
-  // Real Uploaded Work - Promotional Posters
-  { id: 'w-12', src: '/assets/work_posters_8.jpg', label: 'JEE 2027 Batch Poster' },
-  { id: 'w-13', src: '/assets/work_posters_9.jpg', label: 'Studio Promotional Banner' },
-  // Curated High-End Design Verticals — YouTube Thumbnails (real work samples)
-  { id: 'w-14', src: '/assets/yt_thumbnail_1.jpg', label: 'YouTube Thumbnails' },
-  { id: 'w-15', src: '/assets/yt_thumbnail_2.jpg', label: 'YouTube Thumbnails' },
-  { id: 'w-27', src: '/assets/yt_thumbnail_3.jpg', label: 'YouTube Thumbnails' },
-  { id: 'w-26', src: '/assets/logo_aurelia.jpg', label: 'Channel Branding' },
-  { id: 'w-16', src: '/assets/logo_a_lettermark.jpg', label: 'Channel Branding' },
-  { id: 'w-17', src: '/assets/logo_s_swirl.jpg', label: 'Channel Branding' },
-  { id: 'w-23', src: '/assets/logo_olea_organics.jpg', label: 'Channel Branding' },
-  { id: 'w-18', src: '/assets/project_fashion_carousel.jpg', label: 'Social Media' },
-  { id: 'w-21', src: '/assets/work_merch_tshirt_1.png', label: 'Merchandise' },
-  { id: 'w-24', src: '/assets/work_merch_kit_2.jpg', label: 'Merchandise' },
-  { id: 'w-25', src: '/assets/work_merch_bottle_4.jpg', label: 'Merchandise' },
-  { id: 'w-22', src: '/assets/custom_design_business_card_1.jpg', label: 'Custom Design' },
-  { id: 'w-28', src: '/assets/custom_design_business_card_2.jpg', label: 'Custom Design' },
-  { id: 'w-29', src: '/assets/custom_design_business_card_3.jpg', label: 'Custom Design' },
+// Curate showcase items across the 9 primary categories with real optimized assets
+const ribbonItems = [
+  { id: 'r-1', src: '/assets/portfolio/advertising-nova-rift-billboard.webp', label: 'Advertising Billboard', category: '01 Advertising', alt: 'NOVA The Rift Billboard' },
+  { id: 'r-2', src: '/assets/portfolio/branding-aurelia-botanicals-identity.webp', label: 'Aurelia Botanicals', category: '02 Branding', alt: 'Aurelia Botanicals Brand Identity' },
+  { id: 'r-3', src: '/assets/portfolio/ecommerce-auren-botanical-serum.webp', label: 'AUREN Serum Visual', category: '03 Products & E-Com', alt: 'AUREN Botanical Serum Product Visual' },
+  { id: 'r-4', src: '/assets/portfolio/editorial-architectural-magazine-spread.webp', label: 'STRUCT Magazine', category: '04 Editorials', alt: 'STRUCT Modern Architecture Editorial Magazine' },
+  { id: 'r-5', src: '/assets/portfolio/events-creative-summit-poster.webp', label: 'Design Summit 2026', category: '05 Events', alt: 'Prism Design Summit Poster' },
+  { id: 'r-6', src: '/assets/portfolio/infographics-data-visualization-matrix.webp', label: 'Process Matrix', category: '06 Infographics', alt: 'Nexus Process Architecture Infographic' },
+  { id: 'r-7', src: '/assets/portfolio/pod-club-1994-tote-front.webp', label: 'CLUB 1994 Tote', category: '07 Print-on-Demand', alt: 'CLUB 1994 Streetwear Canvas Tote' },
+  { id: 'r-8', src: '/assets/portfolio/restaurant-gulmohar-house-menu.webp', label: 'Gulmohar House Menu', category: '08 Restaurant & Café', alt: 'Gulmohar House Dining Menu' },
+  { id: 'r-9', src: '/assets/portfolio/social-creator-brand-suite.webp', label: 'Creator Brand Suite', category: '09 Social Media', alt: 'Nexus Media Creator Brand Suite' },
+  { id: 'r-10', src: '/assets/portfolio/advertising-clay-co-standee.webp', label: 'Clay & Co Standee', category: '01 Advertising', alt: 'Clay & Co Editorial Standee' },
+  { id: 'r-11', src: '/assets/portfolio/branding-olea-organics-system.webp', label: 'Olea Organics', category: '02 Branding', alt: 'Olea Organics Brand System' },
+  { id: 'r-12', src: '/assets/portfolio/ecommerce-form-linen-apparel.webp', label: 'FORM / 01 Linen', category: '03 Products & E-Com', alt: 'FORM 01 Linen Lookbook' },
+  { id: 'r-13', src: '/assets/portfolio/editorial-minimalist-publication-cover.webp', label: 'Publication Cover', category: '04 Editorials', alt: 'Minimalist Publication Cover Layout' },
+  { id: 'r-14', src: '/assets/portfolio/pod-offline-tee-back-graphic.webp', label: 'OFFLINE Back Graphic', category: '07 Print-on-Demand', alt: 'OFFLINE Cyber Minimalist T-Shirt Graphic' },
+  { id: 'r-15', src: '/assets/portfolio/restaurant-mellow-milk-cafe-menu.webp', label: 'Mellow & Milk Menu', category: '08 Restaurant & Café', alt: 'Mellow and Milk Cafe Menu' },
+  { id: 'r-16', src: '/assets/portfolio/social-youtube-thumbnail-tech.webp', label: 'Tech Video Thumbnail', category: '09 Social Media', alt: 'Tech YouTube Thumbnail' }
 ];
 
-// Interleave items evenly across row 1 and row 2 for balanced visual variety
-const row1 = allWorkImages.filter((_, i) => i % 2 === 0);
-const row2 = allWorkImages.filter((_, i) => i % 2 !== 0);
+const row1 = ribbonItems.filter((_, i) => i % 2 === 0);
+const row2 = ribbonItems.filter((_, i) => i % 2 !== 0);
 
-export const WorkRibbonShowcase = () => {
+export const WorkRibbonShowcase = ({ onSelectProject }) => {
   const row1Triple = [...row1, ...row1, ...row1];
   const row2Triple = [...row2, ...row2, ...row2];
 
-  return (
-    <section className="py-20 bg-[#F6F6F6] relative overflow-hidden select-none">
+  const handleItemClick = (item) => {
+    // Find matching project in PORTFOLIO_PROJECTS if available
+    const matched = PORTFOLIO_PROJECTS.find(p => p.image === item.src || p.title.toLowerCase().includes(item.label.toLowerCase())) || PORTFOLIO_PROJECTS[0];
+    if (onSelectProject) {
+      onSelectProject(matched);
+    }
+  };
 
-      {/* Section Header */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 mb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+  return (
+    <section id="work" className="py-20 bg-[#F6F6F6] relative overflow-hidden select-none">
+      
+      {/* Background Subtle Gradient Blobs */}
+      <div className="absolute top-1/2 left-0 w-[500px] h-[350px] bg-gradient-to-r from-[#FF5733]/10 to-transparent rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 right-0 w-[500px] h-[350px] bg-gradient-to-l from-[#FF7755]/10 to-transparent rounded-full blur-[120px] pointer-events-none" />
+
+      {/* Header */}
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 mb-12 relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
-          <div className="flex items-center gap-3 mb-2">
-            <span className="h-[1px] w-12 bg-[#111111]" />
-            <span className="text-xs uppercase font-mono tracking-widest text-[#666666]">03 / Featured Visuals</span>
+          <div className="flex items-center gap-3 mb-3">
+            <span className="h-[1px] w-12 bg-[#FF5733]" />
+            <span className="text-xs uppercase font-mono tracking-widest text-[#666666]">01 / Portfolio Ribbon</span>
           </div>
-          <h2 className="text-2xl sm:text-5xl font-extrabold text-[#111111] tracking-tight">
-            Work in Motion<span className="font-serif-italic text-[#FF5733]">.</span>
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-[#111111] tracking-tight">
+            Selected Studio Work<span className="font-serif-italic text-[#FF5733]">.</span>
           </h2>
+          <p className="mt-3 text-sm sm:text-base text-[#666666] max-w-xl font-normal">
+            A continuous gallery across all 9 design disciplines. Click on any asset to view detailed project specifications.
+          </p>
         </div>
 
-        <div className="text-xs font-mono text-[#666666] flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-[#E5E5E5] shadow-sm">
+        <div className="text-xs font-mono text-[#666666] flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-[#E5E5E5] shadow-sm shrink-0">
           <Sparkles size={14} className="text-[#FF5733]" />
-          <span>FEATURED CLIENT &amp; TEACHING WORKS</span>
+          <span>ALL 9 CATEGORIES REPRESENTED</span>
         </div>
       </div>
 
-      {/* Tilted Ribbon Container */}
-      <div className="relative w-full overflow-hidden py-10 -rotate-1 sm:-rotate-3 scale-[1.03]">
-
-        {/* Edge fades */}
-        <div className="absolute top-0 left-0 bottom-0 w-16 sm:w-48 bg-gradient-to-r from-[#F6F6F6] to-transparent z-20 pointer-events-none" />
-        <div className="absolute top-0 right-0 bottom-0 w-16 sm:w-48 bg-gradient-to-l from-[#F6F6F6] to-transparent z-20 pointer-events-none" />
-
-        {/* Row 1 — scrolls left */}
-        <div className="flex w-max gap-6 mb-6 animate-marquee-left">
+      {/* Row 1 — Moving Left */}
+      <div className="relative w-full overflow-hidden mb-4 sm:mb-6">
+        <div className="flex gap-3 sm:gap-6 animate-marquee-left w-max">
           {row1Triple.map((item, idx) => (
-            <motion.div
-              key={`r1-${item.id}-${idx}`}
-              whileHover={{ y: -6, scale: 1.02 }}
-              transition={{ duration: 0.25 }}
-              className="w-64 sm:w-[380px] shrink-0 rounded-2xl overflow-hidden shadow-md border border-[#E5E5E5] bg-white group relative"
+            <div
+              key={`row1-${idx}`}
+              onClick={() => handleItemClick(item)}
+              className="group relative w-64 sm:w-80 md:w-96 aspect-[16/10] rounded-2xl overflow-hidden bg-black border border-[#E5E5E5] shrink-0 cursor-pointer shadow-sm hover:shadow-xl hover:border-[#FF5733]/50 transition-all duration-300"
             >
-              {/* Uniform aspect-ratio frame */}
-              <div className="relative aspect-[16/10] w-full overflow-hidden bg-black flex items-center justify-center">
-                <img
-                  src={item.src}
-                  alt={item.label}
-                  className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-              </div>
+              <img
+                src={item.src}
+                alt={item.alt}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
 
-              {/* Category Pill Tag */}
-              <div className="absolute top-3 left-3 z-10">
-                <span className="px-3 py-1 rounded-full text-[9px] font-mono uppercase bg-white/90 backdrop-blur-md text-[#111111] font-semibold border border-[#E5E5E5] shadow-sm">
-                  {item.label}
+              <div className="absolute top-3 left-3">
+                <span className="px-2.5 py-1 rounded-full text-[9px] font-mono uppercase bg-black/60 backdrop-blur-md text-white border border-white/20">
+                  {item.category}
                 </span>
               </div>
-            </motion.div>
+
+              <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                <span className="text-xs font-bold text-white tracking-tight truncate mr-2">{item.label}</span>
+                <div className="w-7 h-7 rounded-full bg-white text-[#111111] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 shrink-0">
+                  <Eye size={13} />
+                </div>
+              </div>
+            </div>
           ))}
         </div>
+      </div>
 
-        {/* Row 2 — scrolls right */}
-        <div className="flex w-max gap-6 animate-marquee-right">
+      {/* Row 2 — Moving Right */}
+      <div className="relative w-full overflow-hidden">
+        <div className="flex gap-3 sm:gap-6 animate-marquee-right w-max">
           {row2Triple.map((item, idx) => (
-            <motion.div
-              key={`r2-${item.id}-${idx}`}
-              whileHover={{ y: -6, scale: 1.02 }}
-              transition={{ duration: 0.25 }}
-              className="w-64 sm:w-[380px] shrink-0 rounded-2xl overflow-hidden shadow-md border border-[#E5E5E5] bg-white group relative"
+            <div
+              key={`row2-${idx}`}
+              onClick={() => handleItemClick(item)}
+              className="group relative w-64 sm:w-80 md:w-96 aspect-[16/10] rounded-2xl overflow-hidden bg-black border border-[#E5E5E5] shrink-0 cursor-pointer shadow-sm hover:shadow-xl hover:border-[#FF5733]/50 transition-all duration-300"
             >
-              {/* Uniform aspect-ratio frame */}
-              <div className="relative aspect-[16/10] w-full overflow-hidden bg-black flex items-center justify-center">
-                <img
-                  src={item.src}
-                  alt={item.label}
-                  className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-              </div>
+              <img
+                src={item.src}
+                alt={item.alt}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
 
-              {/* Category Pill Tag */}
-              <div className="absolute top-3 left-3 z-10">
-                <span className="px-3 py-1 rounded-full text-[9px] font-mono uppercase bg-white/90 backdrop-blur-md text-[#111111] font-semibold border border-[#E5E5E5] shadow-sm">
-                  {item.label}
+              <div className="absolute top-3 left-3">
+                <span className="px-2.5 py-1 rounded-full text-[9px] font-mono uppercase bg-black/60 backdrop-blur-md text-white border border-white/20">
+                  {item.category}
                 </span>
               </div>
-            </motion.div>
+
+              <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                <span className="text-xs font-bold text-white tracking-tight truncate mr-2">{item.label}</span>
+                <div className="w-7 h-7 rounded-full bg-white text-[#111111] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 shrink-0">
+                  <Eye size={13} />
+                </div>
+              </div>
+            </div>
           ))}
         </div>
-
       </div>
 
     </section>

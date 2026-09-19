@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronLeft, ChevronRight, ArrowUpRight } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, ArrowUpRight, Sparkles, CheckCircle } from 'lucide-react';
 
 export const ServiceWorkModal = ({ service, onClose }) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -8,17 +8,11 @@ export const ServiceWorkModal = ({ service, onClose }) => {
   useEffect(() => {
     if (service) {
       setActiveIndex(0);
-      // Increment open-modal counter on body to track nested modals
-      const current = parseInt(document.body.dataset.modalCount || '0', 10);
-      document.body.dataset.modalCount = current + 1;
       document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
     }
-    return () => {
-      const current = parseInt(document.body.dataset.modalCount || '1', 10);
-      const next = Math.max(0, current - 1);
-      document.body.dataset.modalCount = next;
-      if (next === 0) document.body.style.overflow = '';
-    };
+    return () => { document.body.style.overflow = ''; };
   }, [service]);
 
   useEffect(() => {
@@ -32,115 +26,161 @@ export const ServiceWorkModal = ({ service, onClose }) => {
     return () => window.removeEventListener('keydown', handleKey);
   }, [service, onClose]);
 
+  if (!service) return null;
+
   return (
     <AnimatePresence>
-      {service && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.25 }}
-          className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-8"
-          onClick={onClose}
-        >
-          {/* Backdrop */}
-          <div className="absolute inset-0 bg-black/75 backdrop-blur-md" />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.25 }}
+        className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 md:p-8 overflow-y-auto"
+        onClick={onClose}
+      >
+        {/* Backdrop */}
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-md" />
 
-          {/* Modal */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.92, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.92, y: 20 }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="relative z-10 w-full max-w-4xl bg-white rounded-3xl overflow-hidden shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Close Button */}
+        {/* Modal Window */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.94, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.94, y: 20 }}
+          transition={{ duration: 0.3, ease: 'easeOut' }}
+          className="relative z-10 w-full max-w-5xl bg-white rounded-3xl overflow-hidden shadow-2xl my-auto max-h-[92vh] flex flex-col"
+          onClick={(e) => e.stopPropagation()}
+        >
+          {/* Header Bar */}
+          <div className="px-6 py-4 border-b border-[#E5E5E5] bg-white flex items-center justify-between sticky top-0 z-20">
+            <div className="flex items-center gap-3">
+              <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-[#FF5733] text-white">
+                {service.number}
+              </span>
+              <h3 className="text-base sm:text-xl font-extrabold text-[#111111] tracking-tight">
+                {service.title}
+              </h3>
+            </div>
+
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 z-20 p-2.5 rounded-full bg-black/60 backdrop-blur-md text-white hover:bg-[#FF5733] transition-all duration-200"
+              className="p-2 rounded-full bg-[#F6F6F6] text-[#666666] hover:text-[#111111] hover:bg-[#E5E5E5] transition-all"
+              aria-label="Close modal"
             >
               <X size={18} />
             </button>
+          </div>
 
-            {/* Main Image Viewer */}
-            <div className="relative aspect-[16/9] bg-black overflow-hidden flex items-center justify-center">
+          {/* Scrollable Content */}
+          <div className="overflow-y-auto p-4 sm:p-6 space-y-6">
+            
+            {/* Main Active Visual Showcase */}
+            <div className="relative aspect-[16/10] sm:aspect-[16/9] bg-black rounded-2xl overflow-hidden flex items-center justify-center border border-[#E5E5E5]">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={activeIndex}
                   src={service.gallery[activeIndex]}
-                  alt={`${service.title} - ${activeIndex + 1}`}
+                  alt={`${service.title} artwork sample ${activeIndex + 1}`}
                   className="w-full h-full object-contain"
-                  initial={{ opacity: 0, x: 30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -30 }}
-                  transition={{ duration: 0.25 }}
+                  initial={{ opacity: 0, scale: 0.98 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.98 }}
+                  transition={{ duration: 0.2 }}
                 />
               </AnimatePresence>
 
-              {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-
-              {/* Prev / Next arrows */}
+              {/* Prev / Next controls */}
               {service.gallery.length > 1 && (
                 <>
                   <button
                     onClick={() => setActiveIndex(i => (i - 1 + service.gallery.length) % service.gallery.length)}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 p-1.5 sm:p-2.5 rounded-full bg-black/50 backdrop-blur-md text-white hover:bg-[#FF5733] transition-all duration-200"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 backdrop-blur-md text-white hover:bg-[#FF5733] transition-all"
+                    aria-label="Previous artwork"
                   >
                     <ChevronLeft size={20} />
                   </button>
                   <button
                     onClick={() => setActiveIndex(i => (i + 1) % service.gallery.length)}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 p-1.5 sm:p-2.5 rounded-full bg-black/50 backdrop-blur-md text-white hover:bg-[#FF5733] transition-all duration-200"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 backdrop-blur-md text-white hover:bg-[#FF5733] transition-all"
+                    aria-label="Next artwork"
                   >
                     <ChevronRight size={20} />
                   </button>
                 </>
               )}
 
-              {/* Image counter */}
-              <div className="absolute bottom-4 right-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white text-[10px] font-mono uppercase">
-                {activeIndex + 1} / {service.gallery.length}
+              {/* Counter badge */}
+              <div className="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-white text-[10px] font-mono uppercase">
+                {activeIndex + 1} / {service.gallery.length} ASSETS
               </div>
             </div>
 
-            {/* Thumbnail strip */}
+            {/* Thumbnail Strip */}
             {service.gallery.length > 1 && (
-              <div className="flex gap-3 px-6 pt-4 pb-1 overflow-x-auto no-scrollbar">
+              <div className="flex gap-2.5 overflow-x-auto pb-2 no-scrollbar">
                 {service.gallery.map((img, i) => (
                   <button
                     key={i}
                     onClick={() => setActiveIndex(i)}
-                    className={`relative flex-1 aspect-video rounded-xl overflow-hidden border-2 transition-all duration-200 ${
-                      i === activeIndex ? 'border-[#FF5733] shadow-md' : 'border-transparent opacity-60 hover:opacity-90'
+                    className={`relative w-24 sm:w-32 aspect-video rounded-xl overflow-hidden border-2 transition-all shrink-0 ${
+                      i === activeIndex ? 'border-[#FF5733] shadow-md ring-2 ring-[#FF5733]/20' : 'border-transparent opacity-60 hover:opacity-100'
                     }`}
                   >
-                    <img src={img} alt={`thumb-${i}`} className="w-full h-full object-contain bg-black" />
+                    <img src={img} alt={`thumbnail-${i}`} className="w-full h-full object-cover bg-black" />
                   </button>
                 ))}
               </div>
             )}
 
-            {/* Info footer */}
-            <div className="px-6 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
-              <div>
-                <p className="text-[10px] font-mono uppercase tracking-widest text-[#999999] mb-1">{service.tag}</p>
-                <h3 className="text-lg font-extrabold text-[#111111] tracking-tight">{service.title}</h3>
-                <p className="text-xs text-[#666666] mt-1 leading-relaxed max-w-lg">{service.description}</p>
+            {/* Category Description & Deliverables */}
+            <div className="grid md:grid-cols-12 gap-6 pt-2 border-t border-[#F0F0F0]">
+              <div className="md:col-span-8 space-y-3">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-[#FF5733] font-semibold">
+                  {service.tag}
+                </span>
+                <h4 className="text-xl font-bold text-[#111111]">
+                  Discipline Overview & Execution
+                </h4>
+                <p className="text-sm text-[#555555] leading-relaxed">
+                  {service.description}
+                </p>
+
+                {/* Tags */}
+                {service.tags && (
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {service.tags.map((tag) => (
+                      <span key={tag} className="px-3 py-1 rounded-full text-[11px] font-mono bg-[#F6F6F6] text-[#444444] border border-[#E5E5E5]">
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
-              <a
-                href="#contact"
-                onClick={onClose}
-                className="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-[#FF5733] text-white font-bold text-xs font-mono uppercase tracking-wider hover:bg-[#111111] transition-all duration-300 shadow-md"
-              >
-                <span>Connect with us</span>
-                <ArrowUpRight size={14} />
-              </a>
+
+              <div className="md:col-span-4 flex flex-col justify-between p-5 rounded-2xl bg-[#F6F6F6] border border-[#E5E5E5]">
+                <div>
+                  <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#111111] uppercase mb-2">
+                    <Sparkles size={14} className="text-[#FF5733]" />
+                    <span>STUDIO TURNAROUND</span>
+                  </div>
+                  <p className="text-xs text-[#666666] leading-relaxed">
+                    Delivered in 24–48 hours with full vector source files & dedicated IIT Delhi creative direction.
+                  </p>
+                </div>
+
+                <a
+                  href="#contact"
+                  onClick={onClose}
+                  className="mt-6 w-full py-3 rounded-full bg-[#111111] text-white font-bold text-xs uppercase font-mono tracking-wider hover:bg-[#FF5733] transition-all flex items-center justify-center gap-2 shadow-md"
+                >
+                  <span>Discuss This Project</span>
+                  <ArrowUpRight size={14} />
+                </a>
+              </div>
             </div>
-          </motion.div>
+
+          </div>
         </motion.div>
-      )}
+      </motion.div>
     </AnimatePresence>
   );
 };

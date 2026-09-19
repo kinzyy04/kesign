@@ -6,12 +6,11 @@ export const Preloader = ({ onComplete }) => {
   const [isFinished, setIsFinished] = useState(false);
 
   useEffect(() => {
-    let completionTimeout;
     const timer = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(timer);
-          completionTimeout = setTimeout(() => {
+          setTimeout(() => {
             setIsFinished(true);
             if (onComplete) onComplete();
           }, 300);
@@ -22,10 +21,7 @@ export const Preloader = ({ onComplete }) => {
       });
     }, 50);
 
-    return () => {
-      clearInterval(timer);
-      clearTimeout(completionTimeout);
-    };
+    return () => clearInterval(timer);
   }, [onComplete]);
 
   return (
@@ -50,7 +46,7 @@ export const Preloader = ({ onComplete }) => {
               transition={{ duration: 0.6 }}
               className="text-5xl sm:text-8xl md:text-9xl font-extrabold tracking-tighter text-[#111111] font-sans"
             >
-              kesign<span className="text-[#FF5733]">.</span>
+              kesign<span className="font-serif-italic font-normal text-[#666666]">.</span>
             </motion.h1>
             
             <p className="mt-4 text-xs sm:text-sm text-[#666666] tracking-widest uppercase font-mono">
