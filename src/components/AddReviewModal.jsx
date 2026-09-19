@@ -205,7 +205,7 @@ export const AddReviewModal = ({ isOpen, onClose, onAddReview }) => {
                   rows={3}
                   value={reviewText}
                   onChange={(e) => setReviewText(e.target.value)}
-                  placeholder="How was your design experience with Kesign? Mention turnaround speed, visual quality, or project results..."
+                  placeholder="e.g. They redesigned our bakery menu and dessert tags, or made high-CTR thumbnails and LinkedIn carousels for our channel..."
                   className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-xs text-white placeholder-white/30 focus:outline-none focus:border-[#FF5733] transition-colors resize-none"
                 />
               </div>

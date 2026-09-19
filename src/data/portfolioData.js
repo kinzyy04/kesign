@@ -24,15 +24,15 @@ export const PRIMARY_CATEGORIES = [
     tag: "LOGOS · SYSTEMS · GUIDELINES",
     shortDesc: "Distinctive logo systems, visual identities, typography, and brand collateral built with precision.",
     description: "Complete visual identities that give brands an unmistakable personality. We build cohesive logo systems, color palettes, typographic hierarchies, stationery, and physical brand touchpoints.",
-    bannerImage: "/assets/portfolio/branding-aurelia-botanicals-identity.webp",
-    alt: "Aurelia Botanicals visual identity and logo design by Kesign",
+    bannerImage: "/assets/portfolio/branding-swirl-geometric-emblem.webp",
+    alt: "Geometric emblem visual identity and logo design by Kesign",
     stats: "FULL IDENTITY SYSTEMS",
     tags: ["Logo Systems", "Typography", "Color Palettes", "Brand Collateral", "Stationery"],
     gallery: [
-      "/assets/portfolio/branding-aurelia-botanicals-identity.webp",
-      "/assets/portfolio/branding-business-card-stationery.webp",
       "/assets/portfolio/branding-swirl-geometric-emblem.webp",
-      "/assets/portfolio/branding-merchandise-matte-bottle.webp"
+      "/assets/portfolio/branding-business-card-stationery.webp",
+      "/assets/portfolio/branding-merchandise-matte-bottle.webp",
+      "/assets/portfolio/branding-aurelia-botanicals-identity.webp"
     ]
   },
   {
@@ -63,14 +63,14 @@ export const PRIMARY_CATEGORIES = [
     tag: "MAGAZINES · E-BOOKS · REPORTS",
     shortDesc: "Sophisticated publications, magazines, lookbooks, digital guides, and editorial layouts.",
     description: "We treat layout design as an art form. From sleek digital magazines and architectural lookbooks to comprehensive reports, research guides, and publications that feel effortless to read.",
-    bannerImage: "/assets/portfolio/editorial-architectural-magazine-spread.webp",
-    alt: "Architectural magazine editorial spread layout by Kesign",
+    bannerImage: "/assets/portfolio/editorial-typography-lookbook-spread.webp",
+    alt: "Editorial typography lookbook spread layout by Kesign",
     stats: "EDITORIAL SPREADS",
     tags: ["Publication Design", "Magazines", "Lookbooks", "E-Books", "Annual Reports", "Layout Systems"],
     gallery: [
+      "/assets/portfolio/editorial-typography-lookbook-spread.webp",
       "/assets/portfolio/editorial-architectural-magazine-spread.webp",
       "/assets/portfolio/editorial-minimalist-publication-cover.webp",
-      "/assets/portfolio/editorial-typography-lookbook-spread.webp",
       "/assets/portfolio/editorial-modern-catalogue-layout.webp"
     ]
   },
@@ -81,14 +81,14 @@ export const PRIMARY_CATEGORIES = [
     tag: "SUMMITS · STANDEES · SPACES",
     shortDesc: "Complete visual experiences for summits, launches, exhibitions, and brand activations.",
     description: "Designing the physical and digital atmosphere of memorable events. We create striking standees, stage backdrops, posters, passes, banners, and cohesive signage for summits and exhibitions.",
-    bannerImage: "/assets/portfolio/events-creative-summit-poster.webp",
-    alt: "Creative design summit poster and experiential branding by Kesign",
+    bannerImage: "/assets/portfolio/events-stage-backdrop-branding.webp",
+    alt: "Pink girls night event pass and experiential branding by Kesign",
     stats: "EXPERIENTIAL SPACES",
     tags: ["Event Branding", "Summit Posters", "Standees & Signage", "Stage Backdrops", "VIP Passes"],
     gallery: [
+      "/assets/portfolio/events-stage-backdrop-branding.webp",
       "/assets/portfolio/events-creative-summit-poster.webp",
-      "/assets/portfolio/events-clay-co-exhibition-standee.webp",
-      "/assets/portfolio/events-stage-backdrop-branding.webp"
+      "/assets/portfolio/events-clay-co-exhibition-standee.webp"
     ]
   },
   {
@@ -121,7 +121,6 @@ export const PRIMARY_CATEGORIES = [
     tags: ["T-Shirt Graphics", "Tote Bags", "Streetwear Design", "Merchandise Mockups", "POD Collections"],
     gallery: [
       "/assets/portfolio/pod-club-1994-tote-front.webp",
-      "/assets/portfolio/pod-club-1994-tote-closeup.webp",
       "/assets/portfolio/pod-noon-04-tote-minimal.webp",
       "/assets/portfolio/pod-offline-tee-back-graphic.webp",
       "/assets/portfolio/pod-side-b-cassette-graphic.webp",
@@ -135,14 +134,14 @@ export const PRIMARY_CATEGORIES = [
     tag: "MENUS · BOARDS · HOSPITALITY",
     shortDesc: "Appetizing menu systems, table collateral, promotional boards, and hospitality branding.",
     description: "Visual systems for dining spaces, specialty roasters, and culinary concepts. We design editorial food & beverage menus, QR menus, nutrition boards, table cards, and social promos that whet the appetite.",
-    bannerImage: "/assets/portfolio/restaurant-gulmohar-house-menu.webp",
-    alt: "Gulmohar House fine dining editorial restaurant menu by Kesign",
+    bannerImage: "/assets/portfolio/restaurant-nimbu-co-nutrition-board.webp",
+    alt: "Nimbu & Co. Kokum Lime Cooler restaurant beverage packaging and nutrition board by Kesign",
     stats: "CULINARY SYSTEMS",
     tags: ["Editorial Menus", "Café Systems", "Menu Boards", "Table Cards", "Food Promos", "Hospitality"],
     gallery: [
+      "/assets/portfolio/restaurant-nimbu-co-nutrition-board.webp",
       "/assets/portfolio/restaurant-gulmohar-house-menu.webp",
       "/assets/portfolio/restaurant-mellow-milk-cafe-menu.webp",
-      "/assets/portfolio/restaurant-nimbu-co-nutrition-board.webp",
       "/assets/portfolio/restaurant-cafe-promo-poster.webp",
       "/assets/portfolio/restaurant-beverage-social-creative.webp"
     ]
@@ -154,16 +153,16 @@ export const PRIMARY_CATEGORIES = [
     tag: "CAROUSELS · THUMBNAILS · SUITES",
     shortDesc: "Scroll-stopping Instagram carousels, high-CTR YouTube thumbnails, and multi-platform creator suites.",
     description: "High-performance social graphics that command the feed. We design viral educational and lifestyle carousels, bold YouTube thumbnails, reels covers, and cohesive brand templates that drive real organic growth.",
-    bannerImage: "/assets/portfolio/social-creator-brand-suite.webp",
-    alt: "Multi-platform creator social media brand suite by Kesign",
+    bannerImage: "/assets/portfolio/social-youtube-thumbnail-tech.webp",
+    alt: "Time Teaches social media creative and YouTube thumbnail by Kesign",
     stats: "HIGH-CTR CREATIVES",
     tags: ["Instagram Carousels", "YouTube Thumbnails", "LinkedIn Graphics", "Story Templates", "Feed Systems"],
     gallery: [
-      "/assets/portfolio/social-creator-brand-suite.webp",
       "/assets/portfolio/social-youtube-thumbnail-tech.webp",
-      "/assets/portfolio/social-campaign-carousel-editorial.webp",
+      "/assets/portfolio/social-creator-brand-suite.webp",
       "/assets/portfolio/social-instagram-story-creative.webp",
-      "/assets/portfolio/social-promotional-feed-post.webp"
+      "/assets/portfolio/social-promotional-feed-post.webp",
+      "/assets/portfolio/social-campaign-carousel-editorial.webp"
     ]
   }
 ];
@@ -306,7 +305,7 @@ export const PORTFOLIO_PROJECTS = [
     clientType: "Publication Design",
     subtitle: "Avant-garde editorial spreads, multi-column grid layouts, and typographic publication covers.",
     description: "Sharp architectural photography framed with strict Swiss grid typography and clean negative space.",
-    image: "/assets/portfolio/editorial-architectural-magazine-spread.webp",
+    image: "/assets/portfolio/editorial-typography-lookbook-spread.webp",
     alt: "STRUCT Modern Architecture Editorial Magazine Spread",
     tags: ["Magazine Layout", "Swiss Grid", "Publication Cover", "Editorial Design"],
     stats: { deliverables: "16-Page Spread System", turnAround: "48 Hours", format: "Print PDF & Interactive Flipbook" },
@@ -314,9 +313,9 @@ export const PORTFOLIO_PROJECTS = [
     solution: "Built a modular 12-column Swiss grid system that adapts seamlessly across full bleed and multi-column articles.",
     deliverables: ["Full Magazine Layout Spreads", "Cover Art Direction", "Interactive Digital PDF Edition"],
     gallery: [
+      "/assets/portfolio/editorial-typography-lookbook-spread.webp",
       "/assets/portfolio/editorial-architectural-magazine-spread.webp",
       "/assets/portfolio/editorial-minimalist-publication-cover.webp",
-      "/assets/portfolio/editorial-typography-lookbook-spread.webp",
       "/assets/portfolio/editorial-modern-catalogue-layout.webp"
     ]
   },
@@ -330,16 +329,16 @@ export const PORTFOLIO_PROJECTS = [
     clientType: "Event Brand Identity",
     subtitle: "Complete digital and physical branding suite for an international creative leadership summit.",
     description: "Striking typographic posters, stage backdrop visuals, speaker cards, and VIP credential passes.",
-    image: "/assets/portfolio/events-creative-summit-poster.webp",
-    alt: "Prism Creative Design Summit Event Experience Poster",
+    image: "/assets/portfolio/events-stage-backdrop-branding.webp",
+    alt: "Pink girls night event pass and experiential branding by Kesign",
     tags: ["Event Posters", "Experience Design", "Stage Backdrop", "Conference Branding"],
     stats: { deliverables: "Complete Event Suite", turnAround: "48 Hours", format: "Print & Screen 4K" },
     challenge: "Creating an energetic, forward-looking visual identity for a 3-day multi-venue summit.",
     solution: "Developed dynamic fluid gradient forms contrasted against strict industrial sans typography.",
     deliverables: ["Event Keynote Posters", "Speaker Presentation Backdrops", "VIP Badges & Event Schedule"],
     gallery: [
-      "/assets/portfolio/events-creative-summit-poster.webp",
       "/assets/portfolio/events-stage-backdrop-branding.webp",
+      "/assets/portfolio/events-creative-summit-poster.webp",
       "/assets/portfolio/events-clay-co-exhibition-standee.webp"
     ]
   },
@@ -385,7 +384,6 @@ export const PORTFOLIO_PROJECTS = [
     deliverables: ["Production Vector Screen Print Files", "Photorealistic Product Mockups", "Storefront Hero Visuals"],
     gallery: [
       "/assets/portfolio/pod-club-1994-tote-front.webp",
-      "/assets/portfolio/pod-club-1994-tote-closeup.webp",
       "/assets/portfolio/pod-noon-04-tote-minimal.webp"
     ]
   },
@@ -465,16 +463,16 @@ export const PORTFOLIO_PROJECTS = [
     clientType: "Creator Brand",
     subtitle: "High-CTR YouTube thumbnail package, Instagram carousel systems, and LinkedIn authority graphics.",
     description: "Bold focal hierarchy, vibrant contrast, expressive typography, and proven high-CTR compositions.",
-    image: "/assets/portfolio/social-creator-brand-suite.webp",
-    alt: "Nexus Media Multi-Platform Creator Social Media Suite",
+    image: "/assets/portfolio/social-youtube-thumbnail-tech.webp",
+    alt: "Time Teaches YouTube thumbnail and multi-platform creator social media suite by Kesign",
     tags: ["YouTube Thumbnails", "Instagram Carousels", "Social Campaigns", "Creator Branding"],
     stats: { deliverables: "12 Custom Social Assets", turnAround: "24 Hours", format: "Figma & 4K PNG" },
     challenge: "Maintaining a distinctive personal brand identity while optimizing for high click-through rates on noisy feeds.",
     solution: "Built a modular template system with unified typography tokens, bold focal points, and tested thumbnail layouts.",
     deliverables: ["3 High-CTR YouTube Thumbnails", "10-Slide Instagram Carousel", "LinkedIn Banner & Post System"],
     gallery: [
-      "/assets/portfolio/social-creator-brand-suite.webp",
       "/assets/portfolio/social-youtube-thumbnail-tech.webp",
+      "/assets/portfolio/social-creator-brand-suite.webp",
       "/assets/portfolio/social-campaign-carousel-editorial.webp"
     ]
   }
